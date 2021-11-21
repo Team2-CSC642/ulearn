@@ -1,0 +1,77 @@
+.Backdrop {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #CACACA;
+}
+
+.CenterCol{
+    text-align: center;
+    margin: 5px;
+    height: 80vh;
+}
+
+.CenterCol-7{
+    text-align: center;
+    margin: 5px;
+    height: 80vh;
+}
+
+.CenterContentContainer {
+    height: 80vh;
+
+}
+
+.TopNavContainer {
+    height: 10vh;
+    background: linear-gradient(180deg, rgba(57, 93, 218, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #5D5FEF;
+}
+
+.Logo{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    color: white;
+}
+
+.DashTitle{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.DashOptions{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    display: flex;
+    text-align: right;
+}
+
+.DashOptions h4{
+    margin: 10px
+}
+
+.TopNavRow{
+    align-items: center;
+    height: 100%;
+}
+
+.CenterLeftNav{
+    background-color: white;
+    height: 100%;
+}
+
+.CenterRightNav{
+    background-color: white;
+    height: 100%;
+}
+
+.FooterContainer {
+    height: 10vh;
+    background: #202DA4;
+}
+
+.CenterContent{
+    background: #E5E5E5;
+    width: 100%;
+    height: 100%;
+}
