@@ -44,10 +44,11 @@
     color: white;
     display: flex;
     text-align: right;
+    flex-direction: row-reverse;
 }
 
-.DashOptions h4{
-    margin: 10px
+.DashOptions h5{
+    margin: 10px;
 }
 
 .TopNavRow{
@@ -74,4 +75,20 @@
     background: #E5E5E5;
     width: 100%;
     height: 100%;
+}
+
+.CarouselContainer{
+    padding-top: 5%;
+}
+
+.TaskListContainer{
+    margin: 15%;
+}
+
+.TaskListBackground{
+    background-color: #E5E5E5;
+}
+
+.CourseContainer{
+    padding-top: 5%;
 }
