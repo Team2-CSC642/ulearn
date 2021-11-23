@@ -54,6 +54,30 @@ const DashboardTemplate = () => {
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
+                                        <Accordion>
+                                            <Accordion.Item eventKey='0'>
+                                                <Accordion.Header>CSC 256</Accordion.Header>
+                                                <Accordion.Body>
+                                                    <ul>
+                                                        <li>Homework 1</li>
+                                                        <li>Quiz 1</li>
+                                                        <li>Discussion Post</li>
+                                                    </ul>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        </Accordion>
+                                        <Accordion>
+                                            <Accordion.Item eventKey='0'>
+                                                <Accordion.Header>CSC 420</Accordion.Header>
+                                                <Accordion.Body>
+                                                    <ul>
+                                                        <li>Homework 1</li>
+                                                        <li>Quiz 1</li>
+                                                        <li>Discussion Post</li>
+                                                    </ul>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        </Accordion>
                                     </Col>
                                 </Row>
                             </Container>
@@ -62,7 +86,9 @@ const DashboardTemplate = () => {
 
                     {/* Center column content */}
                     <Col className='CenterCol-7' xs={7}>
-                        <div className='CenterContent'></div>
+                        <div className='CenterContent'>
+
+                        </div>
                     </Col>
 
                     {/* Right nav bar stuff */}
@@ -72,7 +98,7 @@ const DashboardTemplate = () => {
                                 <Row>
                                     <Col>
                                         <h5>Announcements</h5>
-                                        <Carousel>
+                                        <Carousel className='Carousel'>
                                             <Carousel.Item>
                                                 <img className='d-block w-100' src={starslide} />
                                                 <Carousel.Caption>
@@ -92,15 +118,16 @@ const DashboardTemplate = () => {
                                                 </Carousel.Caption>
                                             </Carousel.Item>
                                         </Carousel>
+                                        <hr></hr>
                                     </Col>
                                 </Row>
                             </Container>
-                            <Container className='TaskListContainer'>
+                            <Container className='TaskListContainer' fluid>
                                 <Row>
                                     <Col>
                                         <div className='TaskListBackground'>
                                             <h6>TaskList</h6>
-                                            <ListGroup>
+                                            <ListGroup className='TaskListGroup'>
                                                 <ListGroup.Item>
                                                     <p>Task 1</p>
                                                 </ListGroup.Item>
