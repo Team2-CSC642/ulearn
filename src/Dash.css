@@ -86,6 +86,7 @@
 
 .TaskListBackground{
     background-color: #E5E5E5;
+    padding:10px;
 }
 
 .TaskListGroup{
@@ -94,4 +95,38 @@
 
 .CourseContainer{
     padding-top: 5%;
+}
+
+.FooterRow{
+    align-items: center;
+    height: 100%;
+}
+
+.FooterFAQ{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    align-self: flex-end;
+}
+
+.SFSUContact{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    justify-content: center;
+    align-self: flex-end;
+    text-align: center;
+}
+
+.uLearnContact{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: right;
+    align-self: flex-end;
+}
+
+.CenterHeader{
+    justify-content: center;
+    flex-grow: 4;
+    align-self: center;
 }

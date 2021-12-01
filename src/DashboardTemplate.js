@@ -7,6 +7,8 @@ import Carousel from 'react-bootstrap/Carousel'
 import starslide from './checkup.jpg'
 import ListGroup from 'react-bootstrap/ListGroup';
 import Accordion from 'react-bootstrap/Accordion'
+import logo from './sfStateLogo.png';
+import {List} from 'react-bootstrap-icons'
 
 const DashboardTemplate = () => {
     return (
@@ -87,7 +89,18 @@ const DashboardTemplate = () => {
                     {/* Center column content */}
                     <Col className='CenterCol-7' xs={7}>
                         <div className='CenterContent'>
-
+                            <Container>
+                                <Row>
+                                    <Col></Col>
+                                    <Col className='CenterHeader' style={{flexGrow:'4'}}>
+                                        <h1>Calendar View</h1>
+                                    </Col>
+                                    <Col style={{alignSelf:'center'}}>
+                                        <List size={48}/>
+                                    </Col>
+                                    <hr/>
+                                </Row>
+                            </Container>
                         </div>
                     </Col>
 
@@ -142,9 +155,24 @@ const DashboardTemplate = () => {
             </Container>
 
             <Container className='FooterContainer' fluid>
+                <Row className='FooterRow'>
+                    <Col className='FooterFAQ'>
+                        <h3>FAQ</h3>
+                    </Col>
 
+                    <Col className='SFSUContact'>
+                        <div style={{ display: 'flex', justifyContent: 'center', alignSelf: 'end' }}>
+                            <img src={logo} style={{ width: '32px', height: '32px', marginRight: '10px' }} />
+                            <h3> SFSU Contact</h3>
+                        </div>
+                    </Col>
+
+                    <Col className='uLearnContact'>
+                        <h3> uLearn Contact</h3>
+                    </Col>
+                </Row>
             </Container>
-        </div>
+        </div >
     );
 }
 
