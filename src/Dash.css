@@ -130,3 +130,12 @@
     flex-grow: 4;
     align-self: center;
 }
+
+.CalendarRow{
+    height:'85%';
+    font-size:'24px';
+}
+
+.CalendarRow abbr{
+    text-decoration: none;
+}

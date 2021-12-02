@@ -4,11 +4,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel'
-import starslide from './checkup.jpg'
+import starslide from './checkup.jpg';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Accordion from 'react-bootstrap/Accordion'
+import Accordion from 'react-bootstrap/Accordion';
 import logo from './sfStateLogo.png';
-import {List} from 'react-bootstrap-icons'
+import {List} from 'react-bootstrap-icons';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css'
 
 const StudentCalendar = () => {
     return (
@@ -88,8 +90,7 @@ const StudentCalendar = () => {
 
                     {/* Center column content */}
                     <Col className='CenterCol-7' xs={7}>
-                        <div className='CenterContent'>
-                            <Container>
+                            <Container style={{height:'100%'}}>
                                 <Row>
                                     <Col></Col>
                                     <Col className='CenterHeader' style={{flexGrow:'4'}}>
@@ -100,8 +101,10 @@ const StudentCalendar = () => {
                                     </Col>
                                     <hr/>
                                 </Row>
+                                <Row className='CalendarRow'style={{height:'85%', fontSize:'24px', textDecoration:'none'}}>
+                                    <Calendar style={{textDecoration:'none'}}/>
+                                </Row>
                             </Container>
-                        </div>
                     </Col>
 
                     {/* Right nav bar stuff */}
