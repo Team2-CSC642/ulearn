@@ -8,17 +8,46 @@ import starslide from './checkup.jpg';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Accordion from 'react-bootstrap/Accordion';
 import logo from './sfStateLogo.png';
-import {List} from 'react-bootstrap-icons';
+import { List, CircleFill, FileEarmarkPdf } from 'react-bootstrap-icons';
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css'
+import 'react-calendar/dist/Calendar.css';
+import differenceInCalendarDays from 'date-fns/differenceInCalendarDays';
+import Modal from 'react-bootstrap/Modal';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+
+const datesToAddAssignmentsTo = [new Date(2021, 11, 25), new Date(2021, 11, 24), new Date(2021, 11, 15)];
+const datesToAddQuizzesTo = [new Date(2021, 11, 10)];
+const datesToAddEventsTo = [new Date(2021, 11, 29)];
+
+function isSameDay(a, b) {
+    return differenceInCalendarDays(a, b) === 0;
+}
 
 const StudentCalendar = () => {
+    const [assignmentModalShow, setAssignmentModalShow] = React.useState(false);
+    const [quizModalShow, setQuizModalShow] = React.useState(false);
+    const [eventModalShow, setEventModalShow] = React.useState(false);
+    function tileContent({ date, view }) {
+        if (view === 'month') {
+            if (datesToAddAssignmentsTo.find(dDate => isSameDay(dDate, date))) {
+                return <CircleFill size={12} color='#0D6EFD' style={{ marginLeft: '5px' }} onClick={() => setAssignmentModalShow(true)} />;
+            }
+            if (datesToAddQuizzesTo.find(dDate => isSameDay(dDate, date))) {
+                return <CircleFill size={12} color='#DD3544' style={{ marginLeft: '5px' }} onClick={() => setQuizModalShow(true)} />;
+            }
+            if (datesToAddEventsTo.find(dDate => isSameDay(dDate, date))) {
+                return <CircleFill size={12} color='#198754' style={{ marginLeft: '5px' }} onClick={() => setEventModalShow(true)} />;
+            }
+        }
+    }
+
     return (
         <div className='Backdrop'>
             <Container className='TopNavContainer' fluid>
                 <Row className='TopNavRow'>
                     <Col className='Logo' >
-                        <h1>uLearn</h1>
+                        <h1><a href="/" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
                     </Col>
 
                     <Col className='DashTitle'>
@@ -90,21 +119,175 @@ const StudentCalendar = () => {
 
                     {/* Center column content */}
                     <Col className='CenterCol-7' xs={7}>
-                            <Container style={{height:'100%'}}>
-                                <Row>
-                                    <Col></Col>
-                                    <Col className='CenterHeader' style={{flexGrow:'4'}}>
-                                        <h1>Calendar View</h1>
-                                    </Col>
-                                    <Col style={{alignSelf:'center'}}>
-                                        <List size={48}/>
-                                    </Col>
-                                    <hr/>
-                                </Row>
-                                <Row className='CalendarRow'style={{height:'85%', fontSize:'24px', textDecoration:'none'}}>
-                                    <Calendar style={{textDecoration:'none'}}/>
-                                </Row>
-                            </Container>
+                        <Container style={{ height: '100%' }}>
+                            <Modal
+                                size='lg'
+                                aria-labelledby='contained-modal-title-vcenter'
+                                centered
+                                show={assignmentModalShow}
+                                onHide={() => setAssignmentModalShow(false)}
+                            >
+                                <Modal.Header closeButton>
+                                    <Modal.Title style={{ flexGrow: '4' }}>
+                                        <Container>
+                                            <Row style={{ textAlign: 'center' }}>
+                                                <Col>
+                                                    Assignment 1
+                                                </Col>
+                                            </Row>
+                                        </Container>
+                                    </Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <Container>
+                                        <Row style={{ alignItems: 'center' }}>
+                                            <Col>
+                                                <h4 style={{ alignSelf: 'end' }}>Description:</h4>
+                                            </Col>
+                                            <Col style={{ flexGrow: '4' }}>
+                                                <Card body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Card>
+                                            </Col>
+                                        </Row>
+                                        <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                            <Col>
+                                                <h4>Materials:</h4>
+                                            </Col>
+                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
+                                            </Col>
+                                        </Row>
+                                        <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                            <Col>
+                                                <h4>Submission:</h4>
+                                            </Col>
+                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                <Card body><input type='file'></input></Card>
+                                            </Col>
+                                        </Row>
+                                        <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                <Button onClick={() => setAssignmentModalShow(false)}>Submit</Button>
+                                            </Col>
+                                        </Row>
+                                    </Container>
+                                </Modal.Body>
+                            </Modal>
+                            <Modal
+                                size='lg'
+                                aria-labelledby='contained-modal-title-vcenter'
+                                centered
+                                show={quizModalShow}
+                                onHide={() => setQuizModalShow(false)}
+                            >
+                                <Modal.Header closeButton>
+                                    <Modal.Title style={{ flexGrow: '4' }}>
+                                        <Container>
+                                            <Row style={{ textAlign: 'center' }}>
+                                                <Col>
+                                                    Quiz 1
+                                                </Col>
+                                            </Row>
+                                        </Container>
+                                    </Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <Container>
+                                        <Row style={{ alignItems: 'center' }}>
+                                            <Col>
+                                                <h4 style={{ alignSelf: 'end' }}>Description:</h4>
+                                            </Col>
+                                            <Col style={{ flexGrow: '4' }}>
+                                                <Card body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Card>
+                                            </Col>
+                                        </Row>
+                                        <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                            <Col>
+                                                <h4>Materials:</h4>
+                                            </Col>
+                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
+                                            </Col>
+                                        </Row>
+                                        <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                <Button onClick={() => setAssignmentModalShow(false)}>Attempt Quiz</Button>
+                                            </Col>
+                                        </Row>
+                                    </Container>
+                                </Modal.Body>
+                            </Modal>
+                            <Modal
+                                size='lg'
+                                aria-labelledby='contained-modal-title-vcenter'
+                                centered
+                                show={eventModalShow}
+                                onHide={() => setEventModalShow(false)}
+                            >
+                                <Modal.Header closeButton>
+                                    <Modal.Title style={{ flexGrow: '4' }}>
+                                        <Container>
+                                            <Row style={{ textAlign: 'center' }}>
+                                                <Col>
+                                                    Event 1
+                                                </Col>
+                                            </Row>
+                                        </Container>
+                                    </Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <Container>
+                                        <Row style={{ alignItems: 'center' }}>
+                                            <Col>
+                                                <h4 style={{ alignSelf: 'end' }}>Description:</h4>
+                                            </Col>
+                                            <Col style={{ flexGrow: '4' }}>
+                                                <Card body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Card>
+                                            </Col>
+                                        </Row>
+                                        <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                            <Col>
+                                                <h4>Materials:</h4>
+                                            </Col>
+                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
+                                            </Col>
+                                        </Row>
+                                    </Container>
+                                </Modal.Body>
+                            </Modal>
+                            <Row>
+                                <Col>
+                                    <Row>
+                                        <Col>
+                                            <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Assignment</p>
+                                            <CircleFill size={10} color='#0D6EFD' style={{ marginLeft: '5px' }} />
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                            <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Quiz/Test</p>
+                                            <CircleFill size={10} color='#DD3544' style={{ marginLeft: '5px' }} />
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                            <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Event</p>
+                                            <CircleFill size={10} color='#198754' style={{ marginLeft: '5px' }} />
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col className='CenterHeader' style={{ flexGrow: '4' }}>
+                                    <h1>Calendar View</h1>
+                                </Col>
+                                <Col style={{ alignSelf: 'center' }}>
+                                    <List size={48} />
+                                </Col>
+                                <hr />
+                            </Row>
+                            <Row className='CalendarRow' style={{ maxHeight: '85%', height: '85%', fontSize: '24px', textDecoration: 'none', }}>
+                                <Calendar tileContent={tileContent} style={{ textDecoration: 'none' }} />
+                            </Row>
+                        </Container>
                     </Col>
 
                     {/* Right nav bar stuff */}
