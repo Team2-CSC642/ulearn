@@ -119,175 +119,177 @@ const StudentCalendar = () => {
 
                     {/* Center column content */}
                     <Col className='CenterCol-7' xs={7}>
-                        <Container style={{ height: '100%' }}>
-                            <Modal
-                                size='lg'
-                                aria-labelledby='contained-modal-title-vcenter'
-                                centered
-                                show={assignmentModalShow}
-                                onHide={() => setAssignmentModalShow(false)}
-                            >
-                                <Modal.Header closeButton>
-                                    <Modal.Title style={{ flexGrow: '4' }}>
+                        <div className='CenterContent'>
+                            <Container style={{ height: '100%' }}>
+                                <Modal
+                                    size='lg'
+                                    aria-labelledby='contained-modal-title-vcenter'
+                                    centered
+                                    show={assignmentModalShow}
+                                    onHide={() => setAssignmentModalShow(false)}
+                                >
+                                    <Modal.Header closeButton>
+                                        <Modal.Title style={{ flexGrow: '4' }}>
+                                            <Container>
+                                                <Row style={{ textAlign: 'center' }}>
+                                                    <Col>
+                                                        Assignment 1
+                                                    </Col>
+                                                </Row>
+                                            </Container>
+                                        </Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
                                         <Container>
-                                            <Row style={{ textAlign: 'center' }}>
+                                            <Row style={{ alignItems: 'center' }}>
                                                 <Col>
-                                                    Assignment 1
+                                                    <h4 style={{ alignSelf: 'end' }}>Description:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4' }}>
+                                                    <Card body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                <Col>
+                                                    <h4>Materials:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                    <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                <Col>
+                                                    <h4>Submission:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                    <Card body><input type='file'></input></Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                    <Button onClick={() => setAssignmentModalShow(false)}>Submit</Button>
                                                 </Col>
                                             </Row>
                                         </Container>
-                                    </Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body>
-                                    <Container>
-                                        <Row style={{ alignItems: 'center' }}>
-                                            <Col>
-                                                <h4 style={{ alignSelf: 'end' }}>Description:</h4>
-                                            </Col>
-                                            <Col style={{ flexGrow: '4' }}>
-                                                <Card body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Card>
-                                            </Col>
-                                        </Row>
-                                        <Row style={{ alignItems: 'center', marginTop: '10px' }}>
-                                            <Col>
-                                                <h4>Materials:</h4>
-                                            </Col>
-                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
-                                            </Col>
-                                        </Row>
-                                        <Row style={{ alignItems: 'center', marginTop: '10px' }}>
-                                            <Col>
-                                                <h4>Submission:</h4>
-                                            </Col>
-                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                <Card body><input type='file'></input></Card>
-                                            </Col>
-                                        </Row>
-                                        <Row style={{ alignItems: 'center', marginTop: '10px' }}>
-                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                <Button onClick={() => setAssignmentModalShow(false)}>Submit</Button>
-                                            </Col>
-                                        </Row>
-                                    </Container>
-                                </Modal.Body>
-                            </Modal>
-                            <Modal
-                                size='lg'
-                                aria-labelledby='contained-modal-title-vcenter'
-                                centered
-                                show={quizModalShow}
-                                onHide={() => setQuizModalShow(false)}
-                            >
-                                <Modal.Header closeButton>
-                                    <Modal.Title style={{ flexGrow: '4' }}>
+                                    </Modal.Body>
+                                </Modal>
+                                <Modal
+                                    size='lg'
+                                    aria-labelledby='contained-modal-title-vcenter'
+                                    centered
+                                    show={quizModalShow}
+                                    onHide={() => setQuizModalShow(false)}
+                                >
+                                    <Modal.Header closeButton>
+                                        <Modal.Title style={{ flexGrow: '4' }}>
+                                            <Container>
+                                                <Row style={{ textAlign: 'center' }}>
+                                                    <Col>
+                                                        Quiz 1
+                                                    </Col>
+                                                </Row>
+                                            </Container>
+                                        </Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
                                         <Container>
-                                            <Row style={{ textAlign: 'center' }}>
+                                            <Row style={{ alignItems: 'center' }}>
                                                 <Col>
-                                                    Quiz 1
+                                                    <h4 style={{ alignSelf: 'end' }}>Description:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4' }}>
+                                                    <Card body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                <Col>
+                                                    <h4>Materials:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                    <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                    <Button onClick={() => setAssignmentModalShow(false)}>Attempt Quiz</Button>
                                                 </Col>
                                             </Row>
                                         </Container>
-                                    </Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body>
-                                    <Container>
-                                        <Row style={{ alignItems: 'center' }}>
-                                            <Col>
-                                                <h4 style={{ alignSelf: 'end' }}>Description:</h4>
-                                            </Col>
-                                            <Col style={{ flexGrow: '4' }}>
-                                                <Card body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Card>
-                                            </Col>
-                                        </Row>
-                                        <Row style={{ alignItems: 'center', marginTop: '10px' }}>
-                                            <Col>
-                                                <h4>Materials:</h4>
-                                            </Col>
-                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
-                                            </Col>
-                                        </Row>
-                                        <Row style={{ alignItems: 'center', marginTop: '10px' }}>
-                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                <Button onClick={() => setAssignmentModalShow(false)}>Attempt Quiz</Button>
-                                            </Col>
-                                        </Row>
-                                    </Container>
-                                </Modal.Body>
-                            </Modal>
-                            <Modal
-                                size='lg'
-                                aria-labelledby='contained-modal-title-vcenter'
-                                centered
-                                show={eventModalShow}
-                                onHide={() => setEventModalShow(false)}
-                            >
-                                <Modal.Header closeButton>
-                                    <Modal.Title style={{ flexGrow: '4' }}>
+                                    </Modal.Body>
+                                </Modal>
+                                <Modal
+                                    size='lg'
+                                    aria-labelledby='contained-modal-title-vcenter'
+                                    centered
+                                    show={eventModalShow}
+                                    onHide={() => setEventModalShow(false)}
+                                >
+                                    <Modal.Header closeButton>
+                                        <Modal.Title style={{ flexGrow: '4' }}>
+                                            <Container>
+                                                <Row style={{ textAlign: 'center' }}>
+                                                    <Col>
+                                                        Event 1
+                                                    </Col>
+                                                </Row>
+                                            </Container>
+                                        </Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
                                         <Container>
-                                            <Row style={{ textAlign: 'center' }}>
+                                            <Row style={{ alignItems: 'center' }}>
                                                 <Col>
-                                                    Event 1
+                                                    <h4 style={{ alignSelf: 'end' }}>Description:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4' }}>
+                                                    <Card body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                <Col>
+                                                    <h4>Materials:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                    <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
                                                 </Col>
                                             </Row>
                                         </Container>
-                                    </Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body>
-                                    <Container>
-                                        <Row style={{ alignItems: 'center' }}>
+                                    </Modal.Body>
+                                </Modal>
+                                <Row>
+                                    <Col>
+                                        <Row>
                                             <Col>
-                                                <h4 style={{ alignSelf: 'end' }}>Description:</h4>
-                                            </Col>
-                                            <Col style={{ flexGrow: '4' }}>
-                                                <Card body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Card>
+                                                <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Assignment</p>
+                                                <CircleFill size={10} color='#0D6EFD' style={{ marginLeft: '5px' }} />
                                             </Col>
                                         </Row>
-                                        <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                        <Row>
                                             <Col>
-                                                <h4>Materials:</h4>
-                                            </Col>
-                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
+                                                <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Quiz/Test</p>
+                                                <CircleFill size={10} color='#DD3544' style={{ marginLeft: '5px' }} />
                                             </Col>
                                         </Row>
-                                    </Container>
-                                </Modal.Body>
-                            </Modal>
-                            <Row>
-                                <Col>
-                                    <Row>
-                                        <Col>
-                                            <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Assignment</p>
-                                            <CircleFill size={10} color='#0D6EFD' style={{ marginLeft: '5px' }} />
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col>
-                                            <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Quiz/Test</p>
-                                            <CircleFill size={10} color='#DD3544' style={{ marginLeft: '5px' }} />
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col>
-                                            <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Event</p>
-                                            <CircleFill size={10} color='#198754' style={{ marginLeft: '5px' }} />
-                                        </Col>
-                                    </Row>
-                                </Col>
-                                <Col className='CenterHeader' style={{ flexGrow: '4' }}>
-                                    <h1>Calendar View</h1>
-                                </Col>
-                                <Col style={{ alignSelf: 'center' }}>
-                                    <List size={48} />
-                                </Col>
-                                <hr />
-                            </Row>
-                            <Row className='CalendarRow' style={{ maxHeight: '85%', height: '85%', fontSize: '24px', textDecoration: 'none', }}>
-                                <Calendar tileContent={tileContent} style={{ textDecoration: 'none' }} />
-                            </Row>
-                        </Container>
+                                        <Row>
+                                            <Col>
+                                                <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Event</p>
+                                                <CircleFill size={10} color='#198754' style={{ marginLeft: '5px' }} />
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                    <Col className='CenterHeader' style={{ flexGrow: '4' }}>
+                                        <h1>Calendar View</h1>
+                                    </Col>
+                                    <Col style={{ alignSelf: 'center' }}>
+                                        <List size={48} />
+                                    </Col>
+                                    <hr />
+                                </Row>
+                                <Row className='CalendarRow' style={{ maxHeight: '85%', height: '85%', fontSize: '24px', textDecoration: 'none', }}>
+                                    <Calendar tileContent={tileContent} style={{ textDecoration: 'none' }} />
+                                </Row>
+                            </Container>
+                        </div>
                     </Col>
 
                     {/* Right nav bar stuff */}

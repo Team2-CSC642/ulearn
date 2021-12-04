@@ -2,7 +2,9 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import DashboardTemplate from './DashboardTemplate';
 import StudentCalendar from './StudentCalendar';
-import InstructorCalendar from './InstructorCalendar'
+import InstructorCalendar from './InstructorCalendar';
+import InstructorCalendarClass from './InstructorCalendarClass';
+import StudentCalendarClass from './StudentCalendarClass';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -10,8 +12,10 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" exact element={<DashboardTemplate />} />
-            <Route path="/sCalendar" element={<StudentCalendar/>}/>
-            <Route path="/iCalendar" element={<InstructorCalendar/>}/>
+            <Route path="/sCalendar" exact element={<StudentCalendar/>}/>
+            <Route path="/iCalendar" exact element={<InstructorCalendar/>}/>
+            <Route path="/iCalendarClass" element={<InstructorCalendarClass/>}/>
+            <Route path="/sCalendarClass" element={<StudentCalendarClass/>}/>
           </Routes>
         </Router>
   );
