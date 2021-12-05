@@ -51,7 +51,7 @@ const InstructorCalendarClass = () => {
             <Container className='TopNavContainer' fluid>
                 <Row className='TopNavRow'>
                     <Col className='Logo' >
-                        <h1><a href="/" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
+                        <h1><a href="/iCalendar" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
                     </Col>
 
                     <Col className='DashTitle'>
@@ -70,7 +70,7 @@ const InstructorCalendarClass = () => {
                 <Row >
                     {/* Left nav bar stuff */}
                     <Col className='CenterCol'>
-                        <div className='CenterLeftNav'>
+                        <div className='CenterLeftNav overflow-auto'>
                             <Container className='CourseContainer'>
                                 <Row>
                                     <Col>
@@ -81,7 +81,7 @@ const InstructorCalendarClass = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header>CSC 123</Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm' onClick={() => setCreateAssignmentModalShow(true)}>Quick Create</Button></li>
@@ -94,7 +94,7 @@ const InstructorCalendarClass = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header>CSC 256</Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary'>CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
@@ -107,7 +107,7 @@ const InstructorCalendarClass = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header>CSC 420</Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary'>CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>

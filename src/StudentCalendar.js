@@ -77,7 +77,7 @@ const StudentCalendar = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header>CSC 123</Accordion.Header>
+                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Homework 1</li>
@@ -89,7 +89,7 @@ const StudentCalendar = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header>CSC 256</Accordion.Header>
+                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Homework 1</li>
@@ -101,7 +101,7 @@ const StudentCalendar = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header>CSC 420</Accordion.Header>
+                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Homework 1</li>

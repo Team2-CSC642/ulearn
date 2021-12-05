@@ -70,7 +70,7 @@ const InstructorCalendar = () => {
                 <Row >
                     {/* Left nav bar stuff */}
                     <Col className='CenterCol'>
-                        <div className='CenterLeftNav'>
+                        <div className='CenterLeftNav overflow-auto'>
                             <Container className='CourseContainer'>
                                 <Row>
                                     <Col>
@@ -81,7 +81,7 @@ const InstructorCalendar = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header>CSC 123</Accordion.Header>
+                                                <Accordion.Header> <Button href="/iCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm' onClick={() => setCreateAssignmentModalShow(true)}>Quick Create</Button></li>
@@ -94,7 +94,7 @@ const InstructorCalendar = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header>CSC 256</Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
@@ -107,7 +107,7 @@ const InstructorCalendar = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header>CSC 420</Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
