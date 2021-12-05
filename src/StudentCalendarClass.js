@@ -79,9 +79,9 @@ const StudentCalendarClass = () => {
                                                 <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li>Homework 1</li>
+                                                        <li>Assignment 1</li>
                                                         <li>Quiz 1</li>
-                                                        <li>Discussion Post</li>
+                                                        <li>Assignment 2</li>
                                                     </ul>
                                                 </Accordion.Body>
                                             </Accordion.Item>
@@ -91,9 +91,9 @@ const StudentCalendarClass = () => {
                                                 <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li>Homework 1</li>
+                                                        <li>Assignment 1</li>
                                                         <li>Quiz 1</li>
-                                                        <li>Discussion Post</li>
+                                                        <li>Assignment 2</li>
                                                     </ul>
                                                 </Accordion.Body>
                                             </Accordion.Item>
@@ -103,9 +103,9 @@ const StudentCalendarClass = () => {
                                                 <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li>Homework 1</li>
+                                                        <li>Assignment 1</li>
                                                         <li>Quiz 1</li>
-                                                        <li>Discussion Post</li>
+                                                        <li>Assignment 2</li>
                                                     </ul>
                                                 </Accordion.Body>
                                             </Accordion.Item>
@@ -120,7 +120,7 @@ const StudentCalendarClass = () => {
                     <Col className='CenterCol-7' xs={7}>
                         <div className='CenterContent'>
                             <Container className='overflow-auto' style={{ height: '100%' }}>
-                                <Modal
+                            <Modal
                                     size='lg'
                                     aria-labelledby='contained-modal-title-vcenter'
                                     centered
@@ -141,6 +141,14 @@ const StudentCalendarClass = () => {
                                     <Modal.Body>
                                         <Container>
                                             <Row style={{ alignItems: 'center' }}>
+                                                <Col>
+                                                    <h4 style={{ alignSelf: 'end' }}>Due Date:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                    <Card body>12/15/2021 11:59 PM</Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                                 <Col>
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
@@ -164,6 +172,7 @@ const StudentCalendarClass = () => {
                                                     <Card body><input type='file'></input></Card>
                                                 </Col>
                                             </Row>
+                                            <hr />
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                                 <Col style={{ flexGrow: '4', textAlign: 'center' }}>
                                                     <Button onClick={() => setAssignmentModalShow(false)}>Submit</Button>
@@ -194,6 +203,14 @@ const StudentCalendarClass = () => {
                                         <Container>
                                             <Row style={{ alignItems: 'center' }}>
                                                 <Col>
+                                                    <h4 style={{ alignSelf: 'end' }}>Due Date:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                    <Card body>12/10/2021 11:59 PM</Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                <Col>
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
@@ -208,6 +225,7 @@ const StudentCalendarClass = () => {
                                                     <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
                                                 </Col>
                                             </Row>
+                                            <hr />
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                                 <Col style={{ flexGrow: '4', textAlign: 'center' }}>
                                                     <Button onClick={() => setAssignmentModalShow(false)}>Attempt Quiz</Button>
@@ -237,6 +255,14 @@ const StudentCalendarClass = () => {
                                     <Modal.Body>
                                         <Container>
                                             <Row style={{ alignItems: 'center' }}>
+                                                <Col>
+                                                    <h4 style={{ alignSelf: 'end' }}>Due Date:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                    <Card body>12/29/2021 11:59 PM</Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop:'10px' }}>
                                                 <Col>
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
@@ -294,9 +320,9 @@ const StudentCalendarClass = () => {
                                             <Accordion.Header>Assignments/Tests</Accordion.Header>
                                             <Accordion.Body>
                                                 <ul>
-                                                    <li>Homework 1</li>
+                                                    <li>Assignment 1</li>
                                                     <li>Quiz 1</li>
-                                                    <li>Discussion Post</li>
+                                                    <li>Assignment 2</li>
                                                 </ul>
                                             </Accordion.Body>
                                         </Accordion.Item>
@@ -306,9 +332,9 @@ const StudentCalendarClass = () => {
                                             <Accordion.Header>Events</Accordion.Header>
                                             <Accordion.Body>
                                                 <ul>
-                                                    <li>Homework 1</li>
+                                                    <li>Assignment 1</li>
                                                     <li>Quiz 1</li>
-                                                    <li>Discussion Post</li>
+                                                    <li>Assignment 2</li>
                                                 </ul>
                                             </Accordion.Body>
                                         </Accordion.Item>

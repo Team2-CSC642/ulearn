@@ -165,7 +165,7 @@ const InstructorCalendar = () => {
                                                     <h4>Due Date:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                    <Card body><input type='date' /></Card>
+                                                    <Card body><input type='datetime-local' /></Card>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -227,7 +227,7 @@ const InstructorCalendar = () => {
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
                                                     <Card body style={{ textAlign: 'center' }}>
-                                                        <input type='date' value='2021-12-27' />
+                                                        <input type='datetime-local' value='2021-12-15T23:59' />
                                                     </Card>
                                                 </Col>
                                             </Row>
@@ -284,6 +284,16 @@ const InstructorCalendar = () => {
                                         <Container>
                                             <Row style={{ alignItems: 'center' }}>
                                                 <Col>
+                                                    <h4 style={{ alignSelf: 'end' }}>Due Date:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4' }}>
+                                                    <Card body style={{ textAlign: 'center' }}>
+                                                        <input type='datetime-local' value='2021-12-10T23:59' />
+                                                    </Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                <Col>
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
@@ -335,6 +345,16 @@ const InstructorCalendar = () => {
                                     <Modal.Body>
                                         <Container>
                                             <Row style={{ alignItems: 'center' }}>
+                                                <Col>
+                                                    <h4 style={{ alignSelf: 'end' }}>Date:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4' }}>
+                                                    <Card body style={{ textAlign: 'center' }}>
+                                                        <input type='datetime-local' value='2021-12-29T23:59' />
+                                                    </Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px'}}>
                                                 <Col>
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>

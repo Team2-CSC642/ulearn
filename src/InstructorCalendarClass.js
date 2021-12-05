@@ -7,7 +7,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import starslide from './checkup.jpg';
 import Accordion from 'react-bootstrap/Accordion';
 import logo from './sfStateLogo.png';
-import { PencilSquare, CircleFill, FileEarmarkPdf, X, FileEarmarkPlay} from 'react-bootstrap-icons';
+import { PencilSquare, CircleFill, FileEarmarkPdf, X, FileEarmarkPlay } from 'react-bootstrap-icons';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import differenceInCalendarDays from 'date-fns/differenceInCalendarDays';
@@ -97,7 +97,7 @@ const InstructorCalendarClass = () => {
                                                 <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary'>CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
+                                                        <li><Button variant='outline-primary' size='sm' onClick={() => setCreateAssignmentModalShow(true)}>Quick Create</Button></li>
                                                         <li>Homework 1</li>
                                                         <li>Quiz 1</li>
                                                         <li>Discussion Post</li>
@@ -110,7 +110,7 @@ const InstructorCalendarClass = () => {
                                                 <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary'>CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
+                                                        <li><Button variant='outline-primary' size='sm' onClick={() => setCreateAssignmentModalShow(true)}>Quick Create</Button></li>
                                                         <li>Homework 1</li>
                                                         <li>Quiz 1</li>
                                                         <li>Discussion Post</li>
@@ -128,7 +128,7 @@ const InstructorCalendarClass = () => {
                     <Col className='CenterCol-7' xs={7}>
                         <div className='CenterContent'>
                             <Container className='overflow-auto' style={{ height: '100%' }}>
-                            <Modal
+                                <Modal
                                     size='lg'
                                     aria-labelledby='contained-modal-title-vcenter'
                                     centered
@@ -213,7 +213,7 @@ const InstructorCalendarClass = () => {
                                                     <h4>Due Date:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                    <Card body><input type='date' /></Card>
+                                                    <Card body><input type='datetime-local' /></Card>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -275,7 +275,7 @@ const InstructorCalendarClass = () => {
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
                                                     <Card body style={{ textAlign: 'center' }}>
-                                                        <input type='date' value='2021-12-27' />
+                                                        <input type='datetime-local' value='2021-12-15T23:59' />
                                                     </Card>
                                                 </Col>
                                             </Row>
@@ -332,6 +332,16 @@ const InstructorCalendarClass = () => {
                                         <Container>
                                             <Row style={{ alignItems: 'center' }}>
                                                 <Col>
+                                                    <h4 style={{ alignSelf: 'end' }}>Due Date:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4' }}>
+                                                    <Card body style={{ textAlign: 'center' }}>
+                                                        <input type='datetime-local' value='2021-12-10T23:59' />
+                                                    </Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                <Col>
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
@@ -384,6 +394,16 @@ const InstructorCalendarClass = () => {
                                         <Container>
                                             <Row style={{ alignItems: 'center' }}>
                                                 <Col>
+                                                    <h4 style={{ alignSelf: 'end' }}>Date:</h4>
+                                                </Col>
+                                                <Col style={{ flexGrow: '4' }}>
+                                                    <Card body style={{ textAlign: 'center' }}>
+                                                        <input type='datetime-local' value='2021-12-29T23:59' />
+                                                    </Card>
+                                                </Col>
+                                            </Row>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                <Col>
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
@@ -424,32 +444,47 @@ const InstructorCalendarClass = () => {
                                     </Col>
                                     <hr />
                                 </Row>
-                                <Row style={{padding:'10px'}}>
-                                <Card>
-                                    <Card.Title style={{padding:'10px'}}><p style={{display:'inline', marginRight:'10px'}}>Welcome to the class!</p><PencilSquare style={{alignSelf:'end'}} cursor='pointer' onClick={() => setWelcomeCard(true)}/></Card.Title>
-                                </Card>
-                                <Card>
-                                    <Card.Body>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                    </Card.Body>
-                                </Card>
+                                <Row style={{ padding: '10px' }}>
+                                    <Card>
+                                        <Card.Title style={{ padding: '10px' }}><p style={{ display: 'inline', marginRight: '10px' }}>Welcome to the class!</p><PencilSquare style={{ alignSelf: 'end' }} cursor='pointer' onClick={() => setWelcomeCard(true)} /></Card.Title>
+                                    </Card>
+                                    <Card>
+                                        <Card.Body>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                        </Card.Body>
+                                    </Card>
                                 </Row>
                                 <Row class='overflow-auto'>
                                     <Accordion>
-                                        <Accordion.Item eventKey='0' style={{textAlign:'center'}}>
+                                        <Accordion.Item eventKey='0' style={{ textAlign: 'center' }}>
                                             <Accordion.Header>Materials</Accordion.Header>
                                             <Accordion.Body>
                                                 <ul>
-                                                    <li style={{paddingBottom:'10px'}}><FileEarmarkPdf size={36} />Syllabus.pdf<PencilSquare style={{marginLeft:'5px'}} cursor='pointer' /> <X size={36} cursor='pointer'/></li>
-                                                    <li style={{paddingBottom:'10px'}}><FileEarmarkPlay size={36} />Lecture1.pdf <PencilSquare style={{alignSelf:'end'}} cursor='pointer' /> <X size={36} cursor='pointer'/></li>
-                                                    <li><FileEarmarkPlay size={36} />Lecture2.pdf <PencilSquare style={{alignSelf:'end'}} cursor='pointer' /> <X size={36} cursor='pointer'/></li>
+                                                    <li style={{ paddingBottom: '10px' }}><FileEarmarkPdf size={36} />Syllabus.pdf<PencilSquare style={{ marginLeft: '5px' }} cursor='pointer' /> <X size={36} cursor='pointer' /></li>
+                                                    <li style={{ paddingBottom: '10px' }}><FileEarmarkPlay size={36} />Lecture1.pdf <PencilSquare style={{ alignSelf: 'end' }} cursor='pointer' /> <X size={36} cursor='pointer' /></li>
+                                                    <li><FileEarmarkPlay size={36} />Lecture2.pdf <PencilSquare style={{ alignSelf: 'end' }} cursor='pointer' /> <X size={36} cursor='pointer' /></li>
                                                 </ul>
                                             </Accordion.Body>
                                         </Accordion.Item>
                                     </Accordion>
                                     <Accordion>
                                         <Accordion.Item eventKey='0'>
-                                            <Accordion.Header>Assignments/Tests</Accordion.Header>
+                                            <Accordion.Header>Assignments</Accordion.Header>
+                                            <Accordion.Body>
+                                                <ul>
+                                                    <Card>
+                                                        <Container style={{backgroundColor:'#484848'}}><Card.Title style={{marginTop:'10px', color:'white'}}>Assignment 1<PencilSquare style={{ marginLeft:'10px' }} color='white'/></Card.Title></Container>
+                                                        <Card.Body>
+                                                            
+                                                        </Card.Body>
+                                                    </Card>
+                                                </ul>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
+                                    <Accordion>
+                                        <Accordion.Item eventKey='0'>
+                                            <Accordion.Header>Tests</Accordion.Header>
                                             <Accordion.Body>
                                                 <ul>
                                                     <li>Homework 1</li>
@@ -459,7 +494,7 @@ const InstructorCalendarClass = () => {
                                             </Accordion.Body>
                                         </Accordion.Item>
                                     </Accordion>
-                                    <Accordion style={{paddingBottom:'4%'}}>
+                                    <Accordion style={{ paddingBottom: '4%' }}>
                                         <Accordion.Item eventKey='0'>
                                             <Accordion.Header>Events</Accordion.Header>
                                             <Accordion.Body>
