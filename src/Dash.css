@@ -1,3 +1,10 @@
+.HomeBackdrop {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
 .Backdrop {
     display: flex;
     min-height: 100vh;
@@ -32,6 +39,11 @@
     color: white;
 }
 
+.Logo h1 {
+    font-family: 'Patua One', cursive;
+    font-size: 30px;
+}
+
 .DashTitle{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
@@ -48,11 +60,14 @@
 
 .DashOptions h5{
     margin: 10px;
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
 }
 
 .TopNavRow{
     align-items: center;
     height: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 .CenterLeftNav{
@@ -66,6 +81,8 @@
 }
 
 .FooterContainer {
+    bottom: 0;
+    position: fixed;
     height: 7vh;
     background: #202DA4;
 }
@@ -140,6 +157,43 @@
     text-decoration: none;
 }
 
+.homeBanner {
+    height: 500;
+    width: 500;
+    margin-left: 10%;
+}
+
+.Banner {
+    font-family: 'Sora', sans-serif;
+}
+
+.Banner h1 {
+    font-family: 'Patua One', cursive;
+    font-size: 50px;
+}
+
+.Banner h1::first-letter {
+    color: #5D5FEF;
+}
+
+.Banner h2 {
+    font-size: 20px;
+}
+
+.Cards {
+    font-family: 'Sora', sans-serif;
+}
+
+.Cards h2 {
+    font-size: 23px;
+}
+
+.homeCards {
+    position: relative; 
+    justify-content: center; 
+    width: 50%; 
+    left: 25%; 
+    min-height: 35vh;
 .dropdown-toggle{
     width:100%;
 }
