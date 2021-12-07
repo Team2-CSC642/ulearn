@@ -5,6 +5,7 @@ import StudentCalendar from './StudentCalendar';
 import InstructorCalendar from './InstructorCalendar';
 import InstructorCalendarClass from './InstructorCalendarClass';
 import StudentCalendarClass from './StudentCalendarClass';
+import Login from './loginPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" exact element={<DashboardTemplate />} />
+            <Route path="/login" exact element={<Login />} />
             <Route path="/sCalendar" exact element={<StudentCalendar/>}/>
             <Route path="/iCalendar" exact element={<InstructorCalendar/>}/>
             <Route path="/iCalendarClass" element={<InstructorCalendarClass/>}/>
