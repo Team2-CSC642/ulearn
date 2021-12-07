@@ -5,10 +5,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel'
 import starslide from './checkup.jpg';
-import ListGroup from 'react-bootstrap/ListGroup';
 import Accordion from 'react-bootstrap/Accordion';
 import logo from './sfStateLogo.png';
-import { List, CircleFill, FileEarmarkPdf } from 'react-bootstrap-icons';
+import {CircleFill, FileEarmarkPdf, FileEarmarkPlay } from 'react-bootstrap-icons';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import differenceInCalendarDays from 'date-fns/differenceInCalendarDays';
@@ -24,7 +23,7 @@ function isSameDay(a, b) {
     return differenceInCalendarDays(a, b) === 0;
 }
 
-const StudentCalendar = () => {
+const StudentCalendarClass = () => {
     const [assignmentModalShow, setAssignmentModalShow] = React.useState(false);
     const [quizModalShow, setQuizModalShow] = React.useState(false);
     const [eventModalShow, setEventModalShow] = React.useState(false);
@@ -43,11 +42,11 @@ const StudentCalendar = () => {
     }
 
     return (
-        <div className='Backdrop'>
+        <div className='Backdrop overflow-hidden'>
             <Container className='TopNavContainer' fluid>
                 <Row className='TopNavRow'>
                     <Col className='Logo' >
-                        <h1><a href="/" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
+                        <h1><a href="/sCalendar" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
                     </Col>
 
                     <Col className='DashTitle'>
@@ -66,7 +65,7 @@ const StudentCalendar = () => {
                 <Row >
                     {/* Left nav bar stuff */}
                     <Col className='CenterCol'>
-                        <div className='CenterLeftNav'>
+                        <div className='CenterLeftNav overflow-auto'>
                             <Container className='CourseContainer'>
                                 <Row>
                                     <Col>
@@ -77,7 +76,7 @@ const StudentCalendar = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Assignment 1</li>
@@ -120,8 +119,8 @@ const StudentCalendar = () => {
                     {/* Center column content */}
                     <Col className='CenterCol-7' xs={7}>
                         <div className='CenterContent'>
-                            <Container style={{ height: '100%' }}>
-                                <Modal
+                            <Container className='overflow-auto' style={{ height: '100%' }}>
+                            <Modal
                                     size='lg'
                                     aria-labelledby='contained-modal-title-vcenter'
                                     centered
@@ -284,42 +283,69 @@ const StudentCalendar = () => {
                                 </Modal>
                                 <Row>
                                     <Col>
-                                        <Row>
-                                            <Col>
-                                                <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Assignment</p>
-                                                <CircleFill size={10} color='#0D6EFD' style={{ marginLeft: '5px' }} />
-                                            </Col>
-                                        </Row>
-                                        <Row>
-                                            <Col>
-                                                <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Quiz/Test</p>
-                                                <CircleFill size={10} color='#DD3544' style={{ marginLeft: '5px' }} />
-                                            </Col>
-                                        </Row>
-                                        <Row>
-                                            <Col>
-                                                <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Event</p>
-                                                <CircleFill size={10} color='#198754' style={{ marginLeft: '5px' }} />
-                                            </Col>
-                                        </Row>
                                     </Col>
                                     <Col className='CenterHeader' style={{ flexGrow: '4' }}>
-                                        <h1>Calendar View</h1>
+                                        <h1>CSC 123</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                        <List size={48} />
+
                                     </Col>
                                     <hr />
                                 </Row>
-                                <Row className='CalendarRow' style={{ maxHeight: '85%', height: '85%', fontSize: '24px', textDecoration: 'none', }}>
-                                    <Calendar tileContent={tileContent} style={{ textDecoration: 'none' }} />
+                                <Row style={{ padding: '10px' }}>
+                                    <Card>
+                                        <Card.Title style={{ padding: '10px' }}><p style={{ display: 'inline', marginRight: '10px' }}>Welcome to the class!</p></Card.Title>
+                                    </Card>
+                                    <Card>
+                                        <Card.Body>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                        </Card.Body>
+                                    </Card>
+                                </Row>
+                                <Row class='overflow-auto'>
+                                    <Accordion>
+                                        <Accordion.Item eventKey='0' style={{ textAlign: 'center' }}>
+                                            <Accordion.Header>Materials</Accordion.Header>
+                                            <Accordion.Body>
+                                                <ul>
+                                                    <li style={{ paddingBottom: '10px' }}><FileEarmarkPdf size={36} />Syllabus.pdf</li>
+                                                    <li style={{ paddingBottom: '10px' }}><FileEarmarkPlay size={36} />Lecture1.pdf </li>
+                                                    <li><FileEarmarkPlay size={36} />Lecture2.pdf </li>
+                                                </ul>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
+                                    <Accordion>
+                                        <Accordion.Item eventKey='0'>
+                                            <Accordion.Header>Assignments/Tests</Accordion.Header>
+                                            <Accordion.Body>
+                                                <ul>
+                                                    <li>Assignment 1</li>
+                                                    <li>Quiz 1</li>
+                                                    <li>Assignment 2</li>
+                                                </ul>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
+                                    <Accordion style={{ paddingBottom: '4%' }}>
+                                        <Accordion.Item eventKey='0'>
+                                            <Accordion.Header>Events</Accordion.Header>
+                                            <Accordion.Body>
+                                                <ul>
+                                                    <li>Assignment 1</li>
+                                                    <li>Quiz 1</li>
+                                                    <li>Assignment 2</li>
+                                                </ul>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
                                 </Row>
                             </Container>
                         </div>
                     </Col>
 
                     {/* Right nav bar stuff */}
-                    <Col className='CenterCol'>
+                    <Col className='CenterCol' style={{ maxWidth: '20%' }}>
                         <div className='CenterRightNav'>
                             <Container className='CarouselContainer'>
                                 <Row>
@@ -349,17 +375,10 @@ const StudentCalendar = () => {
                                     </Col>
                                 </Row>
                             </Container>
-                            <Container className='TaskListContainer' fluid>
+                            <Container>
                                 <Row>
                                     <Col>
-                                        <div className='TaskListBackground'>
-                                            <h6>TaskList</h6>
-                                            <ListGroup className='TaskListGroup'>
-                                                <ListGroup.Item>
-                                                    <p>Task 1</p>
-                                                </ListGroup.Item>
-                                            </ListGroup>
-                                        </div>
+                                        <Calendar className='SideCalendar' tileContent={tileContent} />
                                     </Col>
                                 </Row>
                             </Container>
@@ -390,4 +409,4 @@ const StudentCalendar = () => {
     );
 }
 
-export default StudentCalendar;
+export default StudentCalendarClass;

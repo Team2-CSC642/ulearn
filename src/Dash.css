@@ -139,3 +139,16 @@
 .CalendarRow abbr{
     text-decoration: none;
 }
+
+.dropdown-toggle{
+    width:100%;
+}
+
+.dropdown-menu.show{
+    width:100%;
+    text-align: center;
+}
+
+.SideCalendar{
+    font-size: 12px;
+}
