@@ -194,6 +194,8 @@
     width: 50%; 
     left: 25%; 
     min-height: 35vh;
+}
+
 .dropdown-toggle{
     width:100%;
 }
