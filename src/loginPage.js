@@ -6,7 +6,15 @@ import logo from './SFState_Logo.png';
 const Login =() =>{
     const [userType, setUserType] = React.useState("");
     const ShareValue = () =>{
-        alert(`userName: ${userType}`)
+       
+        if(`${userType}`.toLowerCase() === "student"){
+            alert(`welecome Student`);
+        }else if(`${userType}`.toLowerCase()==="professor"){
+            alert(`Welcome Professor`);
+        }else{
+            alert(`Invalid Login`);
+        }
+
     }
 
     return (
@@ -24,7 +32,7 @@ const Login =() =>{
             </div>
 
             <div class="form-group">
-                                    <label className ="loginLabel" for="password" class="control-label" >SF State Password</label>
+                                    <label className ="loginLabel2" for="password" class="control-label" >SF State Password</label>
                                         <input class="form-control" id="password" name="j_password" tabindex="2" type="password"></input>
             </div>
 
