@@ -46,10 +46,11 @@ html {
        text-align: center;
    }
 
-   h1{
+   .mike h1{
        font-size: 28px;
    }
-   h1{
+   .mike h1{
+    text-align: center;
     font-family: inherit;
     font-weight: 600;
     line-height: 1.1;
@@ -91,10 +92,10 @@ html {
     cursor: pointer;
     background-image: none;
     border: 1px solid transparent;
-        border-top-color: transparent;
-        border-right-color: transparent;
-        border-bottom-color: transparent;
-        border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
     white-space: nowrap;
     padding: 6px 12px;
     font-size: 14px;
@@ -140,11 +141,9 @@ html {
     text-decoration: none;
     font-weight: 500;
     font-size: 1.4rem; 
+    background: transparent;
    }
 
-   a{
-       background: transparent;
-   }
 
    .tfa{
     color: #660;
@@ -154,15 +153,17 @@ html {
        padding-top: 20px;
    }
 
-   p{
+   p.test{
        margin: 0 0 10px;
+       text-align: center;
    }
 
    #main label{
        padding-left: 5px;
    }
    
-   label{
+   
+   .loginLabel{
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
