@@ -13,7 +13,6 @@
 }
 
 .CenterCol{
-    text-align: center;
     margin: 5px;
     height: 86vh;
 }
@@ -207,4 +206,13 @@
 
 .SideCalendar{
     font-size: 12px;
+}
+
+.cardCheckBox {
+    float: right;
+    pointer-events: none;
+}
+
+.card {
+    text-align: left;
 }
