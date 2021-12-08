@@ -44,7 +44,7 @@ const Login =() =>{
             </div>
 
             <div class="form-group">
-                                    <label className ="loginLabel" for="password" class="control-label" >SF State Password</label>
+                                    <label className ="loginLabel2" for="password" class="control-label" >SF State Password</label>
                                         <input class="form-control" id="password" name="j_password" tabindex="2" type="password"></input>
             </div>
             <div class="form-group">
