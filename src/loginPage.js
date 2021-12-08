@@ -1,20 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useHistory  ,useState, useEffect } from 'react';
 import './login.css';
 import background from './loginBackground.jpg';
 import logo from './SFState_Logo.png';
+import {Link} from "react-router-dom";
 
 const Login =() =>{
     const [userType, setUserType] = React.useState("");
+    let routeName = "";
+    const [nextRoute,setRoute] = React.useState(`${routeName}`);
     const ShareValue = () =>{
        
         if(`${userType}`.toLowerCase() === "student"){
-            alert(`welecome Student`);
+            routeName ="/sCalendar"
+            setRoute(nextRoute => "/sCalendar");
+            // routeName ="sCalendar";
+            // alert(`welecome Student`);
+            // <Link to={{pathname:"/"}}/>
+            
         }else if(`${userType}`.toLowerCase()==="professor"){
-            alert(`Welcome Professor`);
+            routeName ="/iCalendar"
+            setRoute(nextRoute => "/iCalendar");
+            // alert(`Welcome Professor`);
         }else{
             alert(`Invalid Login`);
+            routeName ="/login"
+            setRoute(nextRoute => "/login");
         }
-
+        // <Link to="/sCalendar"></Link>
     }
 
     return (
@@ -32,15 +44,18 @@ const Login =() =>{
             </div>
 
             <div class="form-group">
-                                    <label className ="loginLabel2" for="password" class="control-label" >SF State Password</label>
+                                    <label className ="loginLabel" for="password" class="control-label" >SF State Password</label>
                                         <input class="form-control" id="password" name="j_password" tabindex="2" type="password"></input>
             </div>
-
             <div class="form-group">
-                                        <button class="btn-primary-true btn-lg btn-block" type="submit" name="_eventId_proceed" tabindex="3"
+            <Link to={{
+                pathname:`${nextRoute}`,
+                }}>
+                                        <button class="btn-primary-true btn-lg btn-block"
                                                   onClick={ShareValue}
                                                   >Login</button>
-                                  </div>
+                                                  </Link>
+            </div>
             </form>
 
             <p className="test"class="text-center padding-top-20">
