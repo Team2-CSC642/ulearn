@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
-
 import './login.css';
 import background from './loginBackground.jpg';
 import logo from './SFState_Logo.png';
 
 const Login =() =>{
+    const [userType, setUserType] = React.useState("");
+    const ShareValue = () =>{
+        alert(`userName: ${userType}`)
+    }
+
     return (
         <div className ="backgroundImage">
         <div class="html not-logged-in bg">
@@ -16,17 +20,17 @@ const Login =() =>{
             <div class="form-group">
                                     <label className ="loginLabel" for="username" >SF State ID or Email</label>
                                     <input class="form-control" id="username" name="j_username" type="text" tabindex="1"
-                                               value="" autofocus></input>
+                                                autofocus onChange={(event)=> setUserType(event.target.value)}></input>
             </div>
 
             <div class="form-group">
                                     <label className ="loginLabel" for="password" class="control-label" >SF State Password</label>
-                                        <input class="form-control" id="password" name="j_password" tabindex="2" type="password" value=""></input>
+                                        <input class="form-control" id="password" name="j_password" tabindex="2" type="password"></input>
             </div>
 
             <div class="form-group">
                                         <button class="btn-primary-true btn-lg btn-block" type="submit" name="_eventId_proceed" tabindex="3"
-                                                  onClick="this.childNodes[0].nodeValue='Logging in, please wait...'"
+                                                  onClick={ShareValue}
                                                   >Login</button>
                                   </div>
             </form>
