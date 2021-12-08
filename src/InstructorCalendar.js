@@ -18,6 +18,8 @@ import Button from 'react-bootstrap/Button';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
 
+import TaskList from './TaskList.js';
+
 const datesToAddAssignmentsTo = [new Date(2021, 11, 25), new Date(2021, 11, 24), new Date(2021, 11, 15)];
 const datesToAddQuizzesTo = [new Date(2021, 11, 10)];
 const datesToAddEventsTo = [new Date(2021, 11, 29)];
@@ -455,14 +457,7 @@ const InstructorCalendar = () => {
                             <Container className='TaskListContainer' fluid>
                                 <Row>
                                     <Col>
-                                        <div className='TaskListBackground'>
-                                            <h6>TaskList</h6>
-                                            <ListGroup className='TaskListGroup'>
-                                                <ListGroup.Item>
-                                                    <p>Task 1</p>
-                                                </ListGroup.Item>
-                                            </ListGroup>
-                                        </div>
+                                        <TaskList />
                                     </Col>
                                 </Row>
                             </Container>

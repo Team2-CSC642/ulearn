@@ -10,7 +10,7 @@ import Accordion from 'react-bootstrap/Accordion'
 import logo from './sfStateLogo.png';
 import {List} from 'react-bootstrap-icons';
 
-import SmallTaskList from './SmallTaskList.js';
+import TaskList from './TaskList.js';
 
 const StudentCalendar = () => {
     return (
@@ -141,7 +141,7 @@ const StudentCalendar = () => {
                                 
                                 <Row>
                                     <Col>
-                                        <SmallTaskList />
+                                        <TaskList />
                                     </Col>
                                 </Row>
                             </Container>

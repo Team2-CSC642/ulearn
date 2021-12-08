@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 //import TaskListData from 'TaskListData.json';
 let taskListData = require('./TaskListData.json');
 
-const SmallTaskList = () => {
+const TaskList = () => {
     return(
         <div className='TaskListBackground'>
         {taskListData.map((task) => (
@@ -21,4 +21,4 @@ const SmallTaskList = () => {
     )
 }
 
-export default SmallTaskList;
+export default TaskList;
