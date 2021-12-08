@@ -51,7 +51,7 @@ const Login =() =>{
             <Link to={{
                 pathname:`${nextRoute}`,
                 }}>
-                                        <button class="btn-primary-true btn-lg btn-block"
+                                        <button class="btn-primary-true btn-lg btn-block login"
                                                   onClick={ShareValue}
                                                   >Login</button>
                                                   </Link>
