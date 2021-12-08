@@ -1,11 +1,8 @@
-html { 
-    background: url('https://idp.sfsu.edu/idp/images/global-login.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+.backgroundImage{
+    background: url('https://idp.sfsu.edu/idp/images/global-login.jpg') no-repeat center center fixed;
+    height: 100vh; 
     background-size: cover;
-  }
-
+}
    #center{
     position: absolute;
     top: 50%;

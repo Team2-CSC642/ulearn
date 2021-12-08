@@ -6,7 +6,8 @@ import logo from './SFState_Logo.png';
 
 const Login =() =>{
     return (
-        <body class="html not-logged-in bg">
+        <div className ="backgroundImage">
+        <div class="html not-logged-in bg">
         <div id="center">
             <img class="img-responsive" src={logo} alt ={logo}/>
             <h1 className ="mike" class="text-center margin-15 padding-15"> uLearn Login</h1>
@@ -38,7 +39,8 @@ const Login =() =>{
 				<a className= "tfa" class="tfa" href="https://2fa.sfsu.edu">Not enrolled in 2FA? Enroll now</a>
                         </p>
         </div>
-        </body>
+        </div>
+        </div>
     )
 }
 
