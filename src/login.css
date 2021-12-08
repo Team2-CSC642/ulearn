@@ -12,13 +12,6 @@
     background-color: #ffffff;
     padding: 60px;
    }
-
-   body{
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #565656;
-   }
    .img-responsive{
     display: block;
     width: 100%;
@@ -51,10 +44,6 @@
     font-weight: 600;
     line-height: 1.1;
     color: #464666;
-   }
-
-   *{
-       box-sizing: border-box;
    }
 
    .form-group{
@@ -105,35 +94,6 @@
     user-select: none;
    }
 
-   input,button,select{
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-   }
-
-   button{
-    -webkit-appearance: button;
-
-   }
-
-   button{
-       text-transform: none;
-   }
-
-   button{
-    overflow: visible;
-   }
-
-   button{
-    color: inherit;
-    font: inherit;
-        font-weight: inherit;
-        font-size: inherit;
-        line-height: inherit;
-        font-family: inherit;
-        margin: 0;
-        margin-bottom: 0px;  
-   }
 
    a.login{
     color: #000;
