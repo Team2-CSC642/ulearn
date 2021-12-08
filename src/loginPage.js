@@ -13,9 +13,7 @@ const Login =() =>{
         if(`${userType}`.toLowerCase() === "student"){
             routeName ="/sCalendar"
             setRoute(nextRoute => "/sCalendar");
-            // routeName ="sCalendar";
             // alert(`welecome Student`);
-            // <Link to={{pathname:"/"}}/>
             
         }else if(`${userType}`.toLowerCase()==="professor"){
             routeName ="/iCalendar"
@@ -26,7 +24,6 @@ const Login =() =>{
             routeName ="/login"
             setRoute(nextRoute => "/login");
         }
-        // <Link to="/sCalendar"></Link>
     }
 
     return (
@@ -34,7 +31,7 @@ const Login =() =>{
         <div class="html not-logged-in bg">
         <div id="center">
             <img class="img-responsive" src={logo} alt ={logo}/>
-            <h1 className ="mike" class="text-center margin-15 padding-15"> uLearn Login</h1>
+            <h1 className ="mike" class="text-center margin-15 padding-15 mike"> uLearn Global Login</h1>
             <form title="SF State Global Login">
 
             <div class="form-group">
