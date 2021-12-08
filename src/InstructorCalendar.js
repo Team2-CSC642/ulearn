@@ -414,7 +414,7 @@ const InstructorCalendar = () => {
                                     </Col>
                                     <hr />
                                 </Row>
-                                <Row className='CalendarRow' style={{ maxHeight: '85%', height: '85%', fontSize: '24px', textDecoration: 'none', }}>
+                                <Row className='CalendarRow' style={{ maxHeight: '85%', height: '85%', fontSize: '3vh', textDecoration: 'none', }}>
                                     <Calendar tileContent={tileContent} style={{ textDecoration: 'none' }} />
                                 </Row>
                             </Container>

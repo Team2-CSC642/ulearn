@@ -378,7 +378,7 @@ const StudentCalendarClass = () => {
                             <Container>
                                 <Row>
                                     <Col>
-                                        <Calendar className='SideCalendar' tileContent={tileContent} />
+                                    <Calendar prev2Label={null} next2Label={null} className='SideCalendar' tileContent={tileContent} />
                                     </Col>
                                 </Row>
                             </Container>
