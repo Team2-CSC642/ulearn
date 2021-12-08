@@ -14,8 +14,7 @@ function App() {
   return (
         <Router>
           <Routes>
-            <Route path="/" exact element={<DashboardTemplate />} />
-            <Route path="/home" element={<Home/>}/>
+            <Route path="/" exact element={<Home />} />
             <Route path="/login" exact element={<Login />} />
             <Route path="/sCalendar" exact element={<StudentCalendar/>}/>
             <Route path="/iCalendar" exact element={<InstructorCalendar/>}/>

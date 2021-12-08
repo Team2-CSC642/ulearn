@@ -62,7 +62,41 @@ async function tester() {
         console.log("Logout Test Failed! [X]")
     }
 
-    console.log("\nTest Pass Ratio: ", testCount,"/3")
+    console.log("\nLogin Test Result:");
+    try{
+        await driver.findElement(By.name('login')).click();
+
+        console.log('Testing case: or 1=1;–');
+        await driver.findElement(By.name('j_username')).sendKeys("or 1=1;–");
+        await driver.findElement(By.className('login')).click();
+        await driver.switchTo().alert().accept();
+        await driver.findElement(By.name('j_username')).clear();
+
+        console.log('Testing case: 1=1; drop table notes;');
+        await driver.findElement(By.name('j_username')).sendKeys("1=1; drop table notes;");
+        await driver.findElement(By.className('login')).click();
+        await driver.switchTo().alert().accept();
+        await driver.findElement(By.name('j_username')).clear();
+
+        await driver.findElement(By.name('j_username')).sendKeys("student");
+        await driver.findElement(By.className('login')).click();
+        await driver.findElement(By.className('login')).click();
+        var curURL = await driver.getCurrentUrl();
+        if(curURL !== 'http://localhost:3000/sCalendar'){
+            console.log("Expected URL: http://localhost:3000/sCalendar");
+            console.log("Found Title:", curURL);
+            throw error;
+        }
+        else{
+            console.log('Login Test Passed!')
+            testCount = testCount + 1
+        }
+    }
+    catch{
+        console.log("Login Test Failed! [X]")
+    }
+
+    console.log("\nTest Pass Ratio: ", testCount,"/4")
     await driver.quit();
 }
 
