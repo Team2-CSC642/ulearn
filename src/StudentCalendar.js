@@ -16,6 +16,8 @@ import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
+import TaskList from './TaskList.js';
+
 const datesToAddAssignmentsTo = [new Date(2021, 11, 25), new Date(2021, 11, 24), new Date(2021, 11, 15)];
 const datesToAddQuizzesTo = [new Date(2021, 11, 10)];
 const datesToAddEventsTo = [new Date(2021, 11, 29)];
@@ -311,7 +313,7 @@ const StudentCalendar = () => {
                                     </Col>
                                     <hr />
                                 </Row>
-                                <Row className='CalendarRow' style={{ maxHeight: '85%', height: '85%', fontSize: '24px', textDecoration: 'none', }}>
+                                <Row className='CalendarRow' style={{ maxHeight: '85%', height: '85%', fontSize: '3vh', textDecoration: 'none', }}>
                                     <Calendar tileContent={tileContent} style={{ textDecoration: 'none' }} />
                                 </Row>
                             </Container>
@@ -352,14 +354,7 @@ const StudentCalendar = () => {
                             <Container className='TaskListContainer' fluid>
                                 <Row>
                                     <Col>
-                                        <div className='TaskListBackground'>
-                                            <h6>TaskList</h6>
-                                            <ListGroup className='TaskListGroup'>
-                                                <ListGroup.Item>
-                                                    <p>Task 1</p>
-                                                </ListGroup.Item>
-                                            </ListGroup>
-                                        </div>
+                                        <TaskList />
                                     </Col>
                                 </Row>
                             </Container>
