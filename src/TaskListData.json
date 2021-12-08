@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Quiz 1",
+        "class": "CSC 256",
+        "description": "Chapters 7 and 8",
+        "completed": false
+    },
+    {
+        "name": "Homework 4",
+        "class": "CSC 420",
+        "description": "Submit PDF through Github",
+        "completed": true
+    },
+    {
+        "name": "Report 2",
+        "class": "CSC 123",
+        "description": "5 pages minimum",
+        "completed": false
+    }
+]

@@ -8,7 +8,9 @@ import starslide from './checkup.jpg'
 import ListGroup from 'react-bootstrap/ListGroup';
 import Accordion from 'react-bootstrap/Accordion'
 import logo from './sfStateLogo.png';
-import {List} from 'react-bootstrap-icons'
+import {List} from 'react-bootstrap-icons';
+
+import SmallTaskList from './SmallTaskList.js';
 
 const StudentCalendar = () => {
     return (
@@ -136,16 +138,10 @@ const StudentCalendar = () => {
                                 </Row>
                             </Container>
                             <Container className='TaskListContainer' fluid>
+                                
                                 <Row>
                                     <Col>
-                                        <div className='TaskListBackground'>
-                                            <h6>TaskList</h6>
-                                            <ListGroup className='TaskListGroup'>
-                                                <ListGroup.Item>
-                                                    <p>Task 1</p>
-                                                </ListGroup.Item>
-                                            </ListGroup>
-                                        </div>
+                                        <SmallTaskList />
                                     </Col>
                                 </Row>
                             </Container>
