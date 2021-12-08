@@ -30,7 +30,7 @@ const StudentCalendarClass = () => {
     function tileContent({ date, view }) {
         if (view === 'month') {
             if (datesToAddAssignmentsTo.find(dDate => isSameDay(dDate, date))) {
-                return <CircleFill size={12} color='#0D6EFD' style={{ marginLeft: '5px' }} onClick={() => setAssignmentModalShow(true)} />;
+                return <CircleFill size={12} color='#0D6EFD' style={{ marginLeft: '5px'}} className='assignmentCircle' onClick={() => setAssignmentModalShow(true)} />;
             }
             if (datesToAddQuizzesTo.find(dDate => isSameDay(dDate, date))) {
                 return <CircleFill size={12} color='#DD3544' style={{ marginLeft: '5px' }} onClick={() => setQuizModalShow(true)} />;
@@ -54,7 +54,7 @@ const StudentCalendarClass = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5>Logout</h5>
+                        <h5 name='logout'><a href='http://localhost:3000/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
