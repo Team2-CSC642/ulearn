@@ -2,7 +2,7 @@
 
 ## Our Goals
 
-We hope to engage students participating in online learning by offering seamless course management system and communication between student and instructor for online and in-person college courses while also adhering User Interface and User Experience best practices.
+We hope to engage students participating in online learning by offering a seamless course management system for online and in-person college courses while also adhering to User Interface and User Experience best practices.
 
 ## Our Stack
 
