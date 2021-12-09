@@ -326,7 +326,7 @@ const StudentCalendar = () => {
                             <Container className='CarouselContainer'>
                                 <Row>
                                     <Col>
-                                        <h5>Announcements</h5>
+                                    <h5 style={{textAlign:'center'}}>Announcements</h5>
                                         <Carousel className='Carousel'>
                                             <Carousel.Item>
                                                 <img alt="Announcement Slide" className='d-block w-100' src={starslide} />

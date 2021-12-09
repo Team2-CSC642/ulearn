@@ -11,13 +11,13 @@ const Login =() =>{
     const ShareValue = () =>{
        
         if(`${userType}`.toLowerCase() === "student"){
-            routeName ="/sCalendar"
-            setRoute(nextRoute => "/sCalendar");
+            routeName ="/sTaskList"
+            setRoute(nextRoute => "/sTaskList");
             // alert(`welecome Student`);
             
         }else if(`${userType}`.toLowerCase()==="professor"){
-            routeName ="/iCalendar"
-            setRoute(nextRoute => "/iCalendar");
+            routeName ="/iTaskList"
+            setRoute(nextRoute => "/iTaskList");
             // alert(`Welcome Professor`);
         }else{
             alert(`Invalid Login`);

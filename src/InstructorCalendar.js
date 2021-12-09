@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel'
 import starslide from './checkup.jpg';
-import ListGroup from 'react-bootstrap/ListGroup';
 import Accordion from 'react-bootstrap/Accordion';
 import logo from './sfStateLogo.png';
 import { List, CircleFill, FileEarmarkPdf, X } from 'react-bootstrap-icons';
@@ -412,7 +411,9 @@ const InstructorCalendar = () => {
                                         <h1>Calendar View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                        <List size={48} />
+                                        <a style={{color:'#6C757D'}} href='http://localhost:3000/iTaskList'>
+                                            <List size={48} />
+                                        </a>
                                     </Col>
                                     <hr />
                                 </Row>

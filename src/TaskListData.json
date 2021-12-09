@@ -3,18 +3,40 @@
         "name": "Quiz 1",
         "class": "CSC 256",
         "description": "Chapters 7 and 8",
-        "completed": false
+        "completed": false,
+        "dueDate": "12/10/2021 11:59 PM",
+        "istatus": "Closed: 0/45 Graded"
     },
     {
         "name": "Homework 4",
         "class": "CSC 420",
         "description": "Submit PDF through Github",
-        "completed": true
+        "completed": false,
+        "dueDate": "12/10/2021 11:59 PM",
+        "istatus": "Open: 10/45 submitted"
     },
     {
         "name": "Report 2",
         "class": "CSC 123",
         "description": "5 pages minimum",
-        "completed": false
+        "completed": false,
+        "dueDate": "12/10/2021 11:59 PM",
+        "istatus": "Open: 20/45 submitted"
+    },
+    {
+        "name": "Assignment 1",
+        "class": "CSC 123",
+        "description": "Code Stuff",
+        "completed": false,
+        "dueDate": "12/10/2021 11:59 PM",
+        "istatus": "Open: 22/45 submitted"
+    },
+    {
+        "name": "Assignment 2",
+        "class": "CSC 123",
+        "description": "Code Stuff",
+        "completed": false,
+        "dueDate": "12/10/2021 11:59 PM",
+        "istatus": "Open: 30/45 submitted"
     }
 ]
