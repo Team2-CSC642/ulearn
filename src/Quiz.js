@@ -1,5 +1,6 @@
 import './Dash.css';
 import React from 'react';
+import ReactDOM from "react-dom";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -9,6 +10,7 @@ import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { FormControl, InputGroup } from 'react-bootstrap';
+import { render } from '@testing-library/react';
 
 const Quiz = () => {
     return (
