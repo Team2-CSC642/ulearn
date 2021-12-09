@@ -25,10 +25,13 @@ const Home = () => {
                         <h1>uLearn</h1>
                     </Col>
 
+                    <Col xs={6} style={{textAlign:'center', color:'white'}}>
+                        <h5>HCI Class CSC 642 SFSU CS Department Fall 2021 Team 02</h5>
+                    </Col>
+
                     <Col className='DashOptions'>
-                        <h5>Logout</h5>
-                        <h5>Settings</h5>
-                        <h5>Notifications</h5>
+                        <h5><a style={{color:'white',textDecoration:'none'}} name='login' href="http://localhost:3000/login">Login</a></h5>
+                        <h5>Forgot Password?</h5>
                     </Col>
                 </Row>
             </Container>

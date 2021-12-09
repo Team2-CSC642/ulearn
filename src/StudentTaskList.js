@@ -7,13 +7,17 @@ import Carousel from 'react-bootstrap/Carousel'
 import starslide from './checkup.jpg';
 import Accordion from 'react-bootstrap/Accordion';
 import logo from './sfStateLogo.png';
-import {CircleFill, FileEarmarkPdf, FileEarmarkPlay } from 'react-bootstrap-icons';
+import { CalendarEvent, CircleFill, FileEarmarkPdf, X } from 'react-bootstrap-icons';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import differenceInCalendarDays from 'date-fns/differenceInCalendarDays';
 import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown'
+
+import BigTaskListStudent from './BigTaskListStudent';
 
 const datesToAddAssignmentsTo = [new Date(2021, 11, 25), new Date(2021, 11, 24), new Date(2021, 11, 15)];
 const datesToAddQuizzesTo = [new Date(2021, 11, 10)];
@@ -23,14 +27,14 @@ function isSameDay(a, b) {
     return differenceInCalendarDays(a, b) === 0;
 }
 
-const StudentCalendarClass = () => {
+const StudentTaskList = () => {
     const [assignmentModalShow, setAssignmentModalShow] = React.useState(false);
     const [quizModalShow, setQuizModalShow] = React.useState(false);
     const [eventModalShow, setEventModalShow] = React.useState(false);
     function tileContent({ date, view }) {
         if (view === 'month') {
             if (datesToAddAssignmentsTo.find(dDate => isSameDay(dDate, date))) {
-                return <CircleFill size={12} color='#0D6EFD' style={{ marginLeft: '5px'}} className='assignmentCircle' onClick={() => setAssignmentModalShow(true)} />;
+                return <CircleFill size={12} color='#0D6EFD' style={{ marginLeft: '5px' }} onClick={() => setAssignmentModalShow(true)} />;
             }
             if (datesToAddQuizzesTo.find(dDate => isSameDay(dDate, date))) {
                 return <CircleFill size={12} color='#DD3544' style={{ marginLeft: '5px' }} onClick={() => setQuizModalShow(true)} />;
@@ -42,11 +46,11 @@ const StudentCalendarClass = () => {
     }
 
     return (
-        <div className='Backdrop overflow-hidden'>
+        <div className='Backdrop'>
             <Container className='TopNavContainer' fluid>
                 <Row className='TopNavRow'>
                     <Col className='Logo' >
-                        <h1><a href="/sCalendar" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
+                        <h1><a href="/" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
                     </Col>
 
                     <Col className='DashTitle'>
@@ -54,7 +58,7 @@ const StudentCalendarClass = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5 name='logout'><a href='http://localhost:3000/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
+                    <h5 name='logout'><a href='http://localhost:3000/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -76,36 +80,36 @@ const StudentCalendarClass = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
+                                                <Accordion.Header> <Button href="/iCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li>Assignment 1</li>
+                                                        <li>Homework 1</li>
                                                         <li>Quiz 1</li>
-                                                        <li>Assignment 2</li>
+                                                        <li>Discussion Post</li>
                                                     </ul>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li>Assignment 1</li>
+                                                        <li>Homework 1</li>
                                                         <li>Quiz 1</li>
-                                                        <li>Assignment 2</li>
+                                                        <li>Discussion Post</li>
                                                     </ul>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li>Assignment 1</li>
+                                                        <li>Homework 1</li>
                                                         <li>Quiz 1</li>
-                                                        <li>Assignment 2</li>
+                                                        <li>Discussion Post</li>
                                                     </ul>
                                                 </Accordion.Body>
                                             </Accordion.Item>
@@ -119,7 +123,7 @@ const StudentCalendarClass = () => {
                     {/* Center column content */}
                     <Col className='CenterCol-7' xs={7}>
                         <div className='CenterContent'>
-                            <Container className='overflow-auto' style={{ height: '100%' }}>
+                            <Container style={{ height: '100%' }}>
                             <Modal
                                     size='lg'
                                     aria-labelledby='contained-modal-title-vcenter'
@@ -283,62 +287,20 @@ const StudentCalendarClass = () => {
                                 </Modal>
                                 <Row>
                                     <Col>
+                    
                                     </Col>
                                     <Col className='CenterHeader' style={{ flexGrow: '4' }}>
-                                        <h1>CSC 123</h1>
+                                        <h1>Task View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-
+                                        <a style={{color:'#6C757D'}} href='http://localhost:3000/sCalendar'>
+                                            <CalendarEvent size={48} />
+                                        </a>
                                     </Col>
                                     <hr />
                                 </Row>
-                                <Row style={{ padding: '10px' }}>
-                                    <Card>
-                                        <Card.Title style={{ padding: '10px' }}><p style={{ display: 'inline', marginRight: '10px' }}>Welcome to the class!</p></Card.Title>
-                                    </Card>
-                                    <Card>
-                                        <Card.Body>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                        </Card.Body>
-                                    </Card>
-                                </Row>
-                                <Row class='overflow-auto'>
-                                    <Accordion>
-                                        <Accordion.Item eventKey='0' style={{ textAlign: 'center' }}>
-                                            <Accordion.Header>Materials</Accordion.Header>
-                                            <Accordion.Body>
-                                                <ul>
-                                                    <li style={{ paddingBottom: '10px' }}><FileEarmarkPdf size={36} />Syllabus.pdf</li>
-                                                    <li style={{ paddingBottom: '10px' }}><FileEarmarkPlay size={36} />Lecture1.pdf </li>
-                                                    <li><FileEarmarkPlay size={36} />Lecture2.pdf </li>
-                                                </ul>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                    </Accordion>
-                                    <Accordion>
-                                        <Accordion.Item eventKey='0'>
-                                            <Accordion.Header>Assignments/Tests</Accordion.Header>
-                                            <Accordion.Body>
-                                                <ul>
-                                                    <li>Assignment 1</li>
-                                                    <li>Quiz 1</li>
-                                                    <li>Assignment 2</li>
-                                                </ul>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                    </Accordion>
-                                    <Accordion style={{ paddingBottom: '4%' }}>
-                                        <Accordion.Item eventKey='0'>
-                                            <Accordion.Header>Events</Accordion.Header>
-                                            <Accordion.Body>
-                                                <ul>
-                                                    <li>Assignment 1</li>
-                                                    <li>Quiz 1</li>
-                                                    <li>Assignment 2</li>
-                                                </ul>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                    </Accordion>
+                                <Row className='overflow-auto' style={{height:'80%'}}>
+                                    <BigTaskListStudent setModal={setAssignmentModalShow}/>
                                 </Row>
                             </Container>
                         </div>
@@ -350,7 +312,7 @@ const StudentCalendarClass = () => {
                             <Container className='CarouselContainer'>
                                 <Row>
                                     <Col>
-                                    <h5 style={{textAlign:'center'}}>Announcements</h5>
+                                         <h5 style={{textAlign:'center'}}>Announcements</h5>
                                         <Carousel className='Carousel'>
                                             <Carousel.Item>
                                                 <img alt="Announcement Slide" className='d-block w-100' src={starslide} />
@@ -378,7 +340,7 @@ const StudentCalendarClass = () => {
                             <Container>
                                 <Row>
                                     <Col>
-                                    <Calendar prev2Label={null} next2Label={null} className='SideCalendar' tileContent={tileContent} />
+                                        <Calendar prev2Label={null} next2Label={null} className='SideCalendar' tileContent={tileContent} />
                                     </Col>
                                 </Row>
                             </Container>
@@ -409,4 +371,4 @@ const StudentCalendarClass = () => {
     );
 }
 
-export default StudentCalendarClass;
+export default StudentTaskList;

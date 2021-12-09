@@ -13,7 +13,6 @@
 }
 
 .CenterCol{
-    text-align: center;
     margin: 5px;
     height: 86vh;
 }
@@ -227,4 +226,8 @@
 .QuizOptions {
     background-color: #5D5FEF!important;
     color: #ffffff;
+}
+.cardCheckBox {
+    float: right;
+    pointer-events: none;
 }

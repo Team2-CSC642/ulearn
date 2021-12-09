@@ -1,34 +1,58 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useHistory  ,useState, useEffect } from 'react';
 import './login.css';
 import background from './loginBackground.jpg';
 import logo from './SFState_Logo.png';
+import {Link} from "react-router-dom";
 
 const Login =() =>{
+    const [userType, setUserType] = React.useState("");
+    let routeName = "";
+    const [nextRoute,setRoute] = React.useState(`${routeName}`);
+    const ShareValue = () =>{
+       
+        if(`${userType}`.toLowerCase() === "student"){
+            routeName ="/sTaskList"
+            setRoute(nextRoute => "/sTaskList");
+            // alert(`welecome Student`);
+            
+        }else if(`${userType}`.toLowerCase()==="professor"){
+            routeName ="/iTaskList"
+            setRoute(nextRoute => "/iTaskList");
+            // alert(`Welcome Professor`);
+        }else{
+            alert(`Invalid Login`);
+            routeName ="/login"
+            setRoute(nextRoute => "/login");
+        }
+    }
+
     return (
         <div className ="backgroundImage">
         <div class="html not-logged-in bg">
         <div id="center">
             <img class="img-responsive" src={logo} alt ={logo}/>
-            <h1 className ="mike" class="text-center margin-15 padding-15"> uLearn Login</h1>
+            <h1 className ="mike" class="text-center margin-15 padding-15 mike"> uLearn Global Login</h1>
             <form title="SF State Global Login">
 
             <div class="form-group">
                                     <label className ="loginLabel" for="username" >SF State ID or Email</label>
                                     <input class="form-control" id="username" name="j_username" type="text" tabindex="1"
-                                               value="" autofocus></input>
+                                                autofocus onChange={(event)=> setUserType(event.target.value)}></input>
             </div>
 
             <div class="form-group">
-                                    <label className ="loginLabel" for="password" class="control-label" >SF State Password</label>
-                                        <input class="form-control" id="password" name="j_password" tabindex="2" type="password" value=""></input>
+                                    <label className ="loginLabel2" for="password" class="control-label" >SF State Password</label>
+                                        <input class="form-control" id="password" name="j_password" tabindex="2" type="password"></input>
             </div>
-
             <div class="form-group">
-                                        <button class="btn-primary-true btn-lg btn-block" type="submit" name="_eventId_proceed" tabindex="3"
-                                                  onClick="this.childNodes[0].nodeValue='Logging in, please wait...'"
+            <Link to={{
+                pathname:`${nextRoute}`,
+                }}>
+                                        <button class="btn-primary-true btn-lg btn-block login"
+                                                  onClick={ShareValue}
                                                   >Login</button>
-                                  </div>
+                                                  </Link>
+            </div>
             </form>
 
             <p className="test"class="text-center padding-top-20">

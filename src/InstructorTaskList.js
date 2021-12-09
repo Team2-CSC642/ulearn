@@ -7,7 +7,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import starslide from './checkup.jpg';
 import Accordion from 'react-bootstrap/Accordion';
 import logo from './sfStateLogo.png';
-import { PencilSquare, CircleFill, FileEarmarkPdf, X, FileEarmarkPlay } from 'react-bootstrap-icons';
+import { CalendarEvent, CircleFill, FileEarmarkPdf, X } from 'react-bootstrap-icons';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import differenceInCalendarDays from 'date-fns/differenceInCalendarDays';
@@ -17,6 +17,8 @@ import Button from 'react-bootstrap/Button';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
 
+import BigTaskList from './BigTaskList.js';
+
 const datesToAddAssignmentsTo = [new Date(2021, 11, 25), new Date(2021, 11, 24), new Date(2021, 11, 15)];
 const datesToAddQuizzesTo = [new Date(2021, 11, 10)];
 const datesToAddEventsTo = [new Date(2021, 11, 29)];
@@ -25,13 +27,12 @@ function isSameDay(a, b) {
     return differenceInCalendarDays(a, b) === 0;
 }
 
-const InstructorCalendarClass = () => {
+const InstructorTaskList = () => {
     const [taskType, setTaskType] = React.useState('Select Item Type')
     const [createAssignmentModalShow, setCreateAssignmentModalShow] = React.useState(false);
     const [assignmentModalShow, setAssignmentModalShow] = React.useState(false);
     const [quizModalShow, setQuizModalShow] = React.useState(false);
     const [eventModalShow, setEventModalShow] = React.useState(false);
-    const [welcomeCard, setWelcomeCard] = React.useState(false);
     function tileContent({ date, view }) {
         if (view === 'month') {
             if (datesToAddAssignmentsTo.find(dDate => isSameDay(dDate, date))) {
@@ -47,11 +48,11 @@ const InstructorCalendarClass = () => {
     }
 
     return (
-        <div className='Backdrop overflow-hidden'>
+        <div className='Backdrop'>
             <Container className='TopNavContainer' fluid>
                 <Row className='TopNavRow'>
                     <Col className='Logo' >
-                        <h1><a href="/iCalendar" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
+                        <h1><a href="/" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
                     </Col>
 
                     <Col className='DashTitle'>
@@ -81,7 +82,7 @@ const InstructorCalendarClass = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
+                                                <Accordion.Header> <Button href="/iCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm' onClick={() => setCreateAssignmentModalShow(true)}>Quick Create</Button></li>
@@ -94,10 +95,10 @@ const InstructorCalendarClass = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary'>CSC 256</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li><Button variant='outline-primary' size='sm' onClick={() => setCreateAssignmentModalShow(true)}>Quick Create</Button></li>
+                                                        <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
                                                         <li>Homework 1</li>
                                                         <li>Quiz 1</li>
                                                         <li>Discussion Post</li>
@@ -107,10 +108,10 @@ const InstructorCalendarClass = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary'>CSC 420</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li><Button variant='outline-primary' size='sm' onClick={() => setCreateAssignmentModalShow(true)}>Quick Create</Button></li>
+                                                        <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
                                                         <li>Homework 1</li>
                                                         <li>Quiz 1</li>
                                                         <li>Discussion Post</li>
@@ -127,54 +128,7 @@ const InstructorCalendarClass = () => {
                     {/* Center column content */}
                     <Col className='CenterCol-7' xs={7}>
                         <div className='CenterContent'>
-                            <Container className='overflow-auto' style={{ height: '100%' }}>
-                                <Modal
-                                    size='lg'
-                                    aria-labelledby='contained-modal-title-vcenter'
-                                    centered
-                                    show={welcomeCard}
-                                    onHide={() => setWelcomeCard(false)}
-                                >
-                                    <Modal.Header closeButton>
-                                        <Modal.Title style={{ flexGrow: '4' }}>
-                                            <Container>
-                                                <Row style={{ textAlign: 'center' }}>
-                                                    <Col>
-                                                        Edit Class Description
-                                                    </Col>
-                                                </Row>
-                                            </Container>
-                                        </Modal.Title>
-                                    </Modal.Header>
-                                    <Modal.Body>
-                                        <Container>
-                                            <Row style={{ alignItems: 'center' }}>
-                                                <Col>
-                                                    <h4 style={{ alignSelf: 'end' }}>Title:</h4>
-                                                </Col>
-                                                <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)' }}>Welcome to the class!</textarea>
-                                                </Col>
-                                            </Row>
-                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
-                                                <Col>
-                                                    <h4 style={{ alignSelf: 'end' }}>Description:</h4>
-                                                </Col>
-                                                <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
-                                                </Col>
-                                                <hr />
-                                            </Row>
-                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
-
-                                                <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                    <Button onClick={() => setWelcomeCard(false)}>Save</Button>
-                                                </Col>
-                                            </Row>
-
-                                        </Container>
-                                    </Modal.Body>
-                                </Modal>
+                            <Container style={{ height: '100%' }}>
                                 <Modal
                                     size='lg'
                                     aria-labelledby='contained-modal-title-vcenter'
@@ -202,7 +156,6 @@ const InstructorCalendarClass = () => {
                                                 <Col style={{ flexGrow: '4' }}>
                                                     <DropdownButton title={taskType} variant='outline-primary'>
                                                         <Dropdown.Item as='button' onClick={() => setTaskType('Assignment')}>Assignment</Dropdown.Item>
-                                                        <Dropdown.Item as='button' onClick={() => setTaskType('Material')}>Material</Dropdown.Item>
                                                         <Dropdown.Item as='button' onClick={() => setTaskType('Quiz')}>Quiz</Dropdown.Item>
                                                         <Dropdown.Item as='button' onClick={() => setTaskType('Event')}>Event</Dropdown.Item>
                                                     </DropdownButton>
@@ -221,7 +174,7 @@ const InstructorCalendarClass = () => {
                                                     <h4>Materials:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                    <Card body><input type='file' multiple style={{ marginLeft: '150px' }}></input></Card>
+                                                    <Card style={{textAlign: 'center'}}body><input type='file' multiple style={{ marginLeft: '150px' }}></input></Card>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -229,7 +182,7 @@ const InstructorCalendarClass = () => {
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)' }}></textarea>
+                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%' }}></textarea>
                                                 </Col>
                                                 <hr />
                                             </Row>
@@ -242,7 +195,7 @@ const InstructorCalendarClass = () => {
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
 
                                                 <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                    <Button onClick={() => setAssignmentModalShow(false)}>Submit</Button>
+                                                    <Button onClick={() => setCreateAssignmentModalShow(false)}>Submit</Button>
                                                 </Col>
                                             </Row>
 
@@ -284,7 +237,7 @@ const InstructorCalendarClass = () => {
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -345,7 +298,7 @@ const InstructorCalendarClass = () => {
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -402,12 +355,12 @@ const InstructorCalendarClass = () => {
                                                     </Card>
                                                 </Col>
                                             </Row>
-                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px'}}>
                                                 <Col>
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -435,77 +388,20 @@ const InstructorCalendarClass = () => {
                                 </Modal>
                                 <Row>
                                     <Col>
+                    
                                     </Col>
                                     <Col className='CenterHeader' style={{ flexGrow: '4' }}>
-                                        <h1>CSC 123</h1>
+                                        <h1>Task View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                        <Button onClick={() => setCreateAssignmentModalShow(true)}>New Item</Button>
+                                        <a style={{color:'#6C757D'}} href='http://localhost:3000/iCalendar'>
+                                            <CalendarEvent size={48} />
+                                        </a>
                                     </Col>
                                     <hr />
                                 </Row>
-                                <Row style={{ padding: '10px' }}>
-                                    <Card>
-                                        <Card.Title style={{ padding: '10px' }}><p style={{ display: 'inline', marginRight: '10px' }}>Welcome to the class!</p><PencilSquare style={{ alignSelf: 'end' }} cursor='pointer' onClick={() => setWelcomeCard(true)} /></Card.Title>
-                                    </Card>
-                                    <Card>
-                                        <Card.Body>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                        </Card.Body>
-                                    </Card>
-                                </Row>
-                                <Row class='overflow-auto'>
-                                    <Accordion>
-                                        <Accordion.Item eventKey='0' style={{ textAlign: 'center' }}>
-                                            <Accordion.Header>Materials</Accordion.Header>
-                                            <Accordion.Body>
-                                                <ul>
-                                                    <li style={{ paddingBottom: '10px' }}><FileEarmarkPdf size={36} />Syllabus.pdf<PencilSquare style={{ marginLeft: '5px' }} cursor='pointer' /> <X size={36} cursor='pointer' /></li>
-                                                    <li style={{ paddingBottom: '10px' }}><FileEarmarkPlay size={36} />Lecture1.pdf <PencilSquare style={{ alignSelf: 'end' }} cursor='pointer' /> <X size={36} cursor='pointer' /></li>
-                                                    <li><FileEarmarkPlay size={36} />Lecture2.pdf <PencilSquare style={{ alignSelf: 'end' }} cursor='pointer' /> <X size={36} cursor='pointer' /></li>
-                                                </ul>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                    </Accordion>
-                                    <Accordion>
-                                        <Accordion.Item eventKey='0'>
-                                            <Accordion.Header>Assignments</Accordion.Header>
-                                            <Accordion.Body>
-                                                <ul>
-                                                    <Card>
-                                                        <Container style={{backgroundColor:'#484848'}}><Card.Title style={{marginTop:'10px', color:'white'}}>Assignment 1<PencilSquare style={{ marginLeft:'10px' }} color='white'/></Card.Title></Container>
-                                                        <Card.Body>
-                                                            
-                                                        </Card.Body>
-                                                    </Card>
-                                                </ul>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                    </Accordion>
-                                    <Accordion>
-                                        <Accordion.Item eventKey='0'>
-                                            <Accordion.Header>Tests</Accordion.Header>
-                                            <Accordion.Body>
-                                                <ul>
-                                                    <li>Homework 1</li>
-                                                    <li>Quiz 1</li>
-                                                    <li>Discussion Post</li>
-                                                </ul>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                    </Accordion>
-                                    <Accordion style={{ paddingBottom: '4%' }}>
-                                        <Accordion.Item eventKey='0'>
-                                            <Accordion.Header>Events</Accordion.Header>
-                                            <Accordion.Body>
-                                                <ul>
-                                                    <li>Homework 1</li>
-                                                    <li>Quiz 1</li>
-                                                    <li>Discussion Post</li>
-                                                </ul>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                    </Accordion>
+                                <Row className='overflow-auto' style={{height:'80%'}}>
+                                    <BigTaskList setModal={setAssignmentModalShow}/>
                                 </Row>
                             </Container>
                         </div>
@@ -517,7 +413,7 @@ const InstructorCalendarClass = () => {
                             <Container className='CarouselContainer'>
                                 <Row>
                                     <Col>
-                                        <h5>Announcements</h5>
+                                         <h5 style={{textAlign:'center'}}>Announcements</h5>
                                         <Carousel className='Carousel'>
                                             <Carousel.Item>
                                                 <img alt="Announcement Slide" className='d-block w-100' src={starslide} />
@@ -576,4 +472,4 @@ const InstructorCalendarClass = () => {
     );
 }
 
-export default InstructorCalendarClass;
+export default InstructorTaskList;

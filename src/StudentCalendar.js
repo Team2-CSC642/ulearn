@@ -16,6 +16,8 @@ import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
+import TaskList from './TaskList.js';
+
 const datesToAddAssignmentsTo = [new Date(2021, 11, 25), new Date(2021, 11, 24), new Date(2021, 11, 15)];
 const datesToAddQuizzesTo = [new Date(2021, 11, 10)];
 const datesToAddEventsTo = [new Date(2021, 11, 29)];
@@ -66,7 +68,7 @@ const StudentCalendar = () => {
                 <Row >
                     {/* Left nav bar stuff */}
                     <Col className='CenterCol'>
-                        <div className='CenterLeftNav'>
+                        <div className='CenterLeftNav overflow-auto'>
                             <Container className='CourseContainer'>
                                 <Row>
                                     <Col>
@@ -77,36 +79,36 @@ const StudentCalendar = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
+                                                <Accordion.Header> <Button href="/iCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li>Assignment 1</li>
+                                                        <li>Homework 1</li>
                                                         <li>Quiz 1</li>
-                                                        <li>Assignment 2</li>
+                                                        <li>Discussion Post</li>
                                                     </ul>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li>Assignment 1</li>
+                                                        <li>Homework 1</li>
                                                         <li>Quiz 1</li>
-                                                        <li>Assignment 2</li>
+                                                        <li>Discussion Post</li>
                                                     </ul>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li>Assignment 1</li>
+                                                        <li>Homework 1</li>
                                                         <li>Quiz 1</li>
-                                                        <li>Assignment 2</li>
+                                                        <li>Discussion Post</li>
                                                     </ul>
                                                 </Accordion.Body>
                                             </Accordion.Item>
@@ -307,11 +309,13 @@ const StudentCalendar = () => {
                                         <h1>Calendar View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                        <List size={48} />
+                                    <a style={{color:'#6C757D'}} href='http://localhost:3000/sTaskList'>
+                                            <List size={48} />
+                                        </a>
                                     </Col>
                                     <hr />
                                 </Row>
-                                <Row className='CalendarRow' style={{ maxHeight: '85%', height: '85%', fontSize: '24px', textDecoration: 'none', }}>
+                                <Row className='CalendarRow' style={{ maxHeight: '85%', height: '85%', fontSize: '3vh', textDecoration: 'none', }}>
                                     <Calendar tileContent={tileContent} style={{ textDecoration: 'none' }} />
                                 </Row>
                             </Container>
@@ -324,7 +328,7 @@ const StudentCalendar = () => {
                             <Container className='CarouselContainer'>
                                 <Row>
                                     <Col>
-                                        <h5>Announcements</h5>
+                                    <h5 style={{textAlign:'center'}}>Announcements</h5>
                                         <Carousel className='Carousel'>
                                             <Carousel.Item>
                                                 <img alt="Announcement Slide" className='d-block w-100' src={starslide} />
@@ -349,19 +353,9 @@ const StudentCalendar = () => {
                                     </Col>
                                 </Row>
                             </Container>
-                            <Container className='TaskListContainer' fluid>
-                                <Row>
-                                    <Col>
-                                        <div className='TaskListBackground'>
-                                            <h6>TaskList</h6>
-                                            <ListGroup className='TaskListGroup'>
-                                                <ListGroup.Item>
-                                                    <p>Task 1</p>
-                                                </ListGroup.Item>
-                                            </ListGroup>
-                                        </div>
-                                    </Col>
-                                </Row>
+                            <Container className='TaskListContainer overflow-auto' style={{height:'60%', padding:'6%'}}>
+                                        <h5 style={{textAlign:'center'}}>Task List</h5>
+                                        <TaskList setModal={setAssignmentModalShow}/>
                             </Container>
                         </div>
                     </Col>

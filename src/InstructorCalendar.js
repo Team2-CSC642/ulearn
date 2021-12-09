@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel'
 import starslide from './checkup.jpg';
-import ListGroup from 'react-bootstrap/ListGroup';
 import Accordion from 'react-bootstrap/Accordion';
 import logo from './sfStateLogo.png';
 import { List, CircleFill, FileEarmarkPdf, X } from 'react-bootstrap-icons';
@@ -17,6 +16,8 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
+
+import TaskList from './TaskList.js';
 
 const datesToAddAssignmentsTo = [new Date(2021, 11, 25), new Date(2021, 11, 24), new Date(2021, 11, 15)];
 const datesToAddQuizzesTo = [new Date(2021, 11, 10)];
@@ -59,7 +60,7 @@ const InstructorCalendar = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5>Logout</h5>
+                        <h5 name='logout'><a href='http://localhost:3000/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -173,7 +174,7 @@ const InstructorCalendar = () => {
                                                     <h4>Materials:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                    <Card body><input type='file' multiple style={{ marginLeft: '150px' }}></input></Card>
+                                                    <Card style={{textAlign: 'center'}}body><input type='file' multiple style={{ marginLeft: '150px' }}></input></Card>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -181,7 +182,7 @@ const InstructorCalendar = () => {
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)' }}></textarea>
+                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%' }}></textarea>
                                                 </Col>
                                                 <hr />
                                             </Row>
@@ -194,7 +195,7 @@ const InstructorCalendar = () => {
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
 
                                                 <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                    <Button onClick={() => setAssignmentModalShow(false)}>Submit</Button>
+                                                    <Button onClick={() => setCreateAssignmentModalShow(false)}>Submit</Button>
                                                 </Col>
                                             </Row>
 
@@ -236,7 +237,7 @@ const InstructorCalendar = () => {
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -297,7 +298,7 @@ const InstructorCalendar = () => {
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -359,7 +360,7 @@ const InstructorCalendar = () => {
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -410,11 +411,13 @@ const InstructorCalendar = () => {
                                         <h1>Calendar View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                        <List size={48} />
+                                        <a style={{color:'#6C757D'}} href='http://localhost:3000/iTaskList'>
+                                            <List size={48} />
+                                        </a>
                                     </Col>
                                     <hr />
                                 </Row>
-                                <Row className='CalendarRow' style={{ maxHeight: '85%', height: '85%', fontSize: '24px', textDecoration: 'none', }}>
+                                <Row className='CalendarRow' style={{ maxHeight: '85%', height: '85%', fontSize: '3vh', textDecoration: 'none', }}>
                                     <Calendar tileContent={tileContent} style={{ textDecoration: 'none' }} />
                                 </Row>
                             </Container>
@@ -427,7 +430,7 @@ const InstructorCalendar = () => {
                             <Container className='CarouselContainer'>
                                 <Row>
                                     <Col>
-                                        <h5>Announcements</h5>
+                                        <h5 style={{textAlign:'center'}}>Announcements</h5>
                                         <Carousel className='Carousel'>
                                             <Carousel.Item>
                                                 <img alt="Announcement Slide" className='d-block w-100' src={starslide} />
@@ -452,19 +455,9 @@ const InstructorCalendar = () => {
                                     </Col>
                                 </Row>
                             </Container>
-                            <Container className='TaskListContainer' fluid>
-                                <Row>
-                                    <Col>
-                                        <div className='TaskListBackground'>
-                                            <h6>TaskList</h6>
-                                            <ListGroup className='TaskListGroup'>
-                                                <ListGroup.Item>
-                                                    <p>Task 1</p>
-                                                </ListGroup.Item>
-                                            </ListGroup>
-                                        </div>
-                                    </Col>
-                                </Row>
+                            <Container className='TaskListContainer overflow-auto' style={{height:'60%', padding:'6%'}}>
+                                        <h5 style={{textAlign:'center'}}>Task List</h5>
+                                        <TaskList setModal={setAssignmentModalShow}/>
                             </Container>
                         </div>
                     </Col>
