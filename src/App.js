@@ -8,6 +8,7 @@ import InstructorCalendar from './InstructorCalendar';
 import InstructorCalendarClass from './InstructorCalendarClass';
 import StudentCalendarClass from './StudentCalendarClass';
 import Login from './loginPage';
+import Quiz from './Quiz';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/iCalendar" exact element={<InstructorCalendar/>}/>
             <Route path="/iCalendarClass" element={<InstructorCalendarClass/>}/>
             <Route path="/sCalendarClass" element={<StudentCalendarClass/>}/>
+            <Route path="/createQuiz" element={<Quiz/>}/>
           </Routes>
         </Router>
   );

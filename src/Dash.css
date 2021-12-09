@@ -208,3 +208,23 @@
 .SideCalendar{
     font-size: 12px;
 }
+
+.AddQuestion {
+    float: right;
+    margin-top: 7px;
+}
+
+.CancelQuiz {
+    float: left;
+    margin-top: 8px;
+}
+
+.SubmitQuiz {
+    float: right;
+    margin-top: 8px;
+}
+
+.QuizOptions {
+    background-color: #5D5FEF!important;
+    color: #ffffff;
+}
