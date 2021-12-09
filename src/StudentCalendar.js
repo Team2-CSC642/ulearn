@@ -68,7 +68,7 @@ const StudentCalendar = () => {
                 <Row >
                     {/* Left nav bar stuff */}
                     <Col className='CenterCol'>
-                        <div className='CenterLeftNav'>
+                        <div className='CenterLeftNav overflow-auto'>
                             <Container className='CourseContainer'>
                                 <Row>
                                     <Col>
@@ -79,36 +79,36 @@ const StudentCalendar = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
+                                                <Accordion.Header> <Button href="/iCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li>Assignment 1</li>
+                                                        <li>Homework 1</li>
                                                         <li>Quiz 1</li>
-                                                        <li>Assignment 2</li>
+                                                        <li>Discussion Post</li>
                                                     </ul>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li>Assignment 1</li>
+                                                        <li>Homework 1</li>
                                                         <li>Quiz 1</li>
-                                                        <li>Assignment 2</li>
+                                                        <li>Discussion Post</li>
                                                     </ul>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
-                                                        <li>Assignment 1</li>
+                                                        <li>Homework 1</li>
                                                         <li>Quiz 1</li>
-                                                        <li>Assignment 2</li>
+                                                        <li>Discussion Post</li>
                                                     </ul>
                                                 </Accordion.Body>
                                             </Accordion.Item>
@@ -309,7 +309,9 @@ const StudentCalendar = () => {
                                         <h1>Calendar View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                        <List size={48} />
+                                    <a style={{color:'#6C757D'}} href='http://localhost:3000/sTaskList'>
+                                            <List size={48} />
+                                        </a>
                                     </Col>
                                     <hr />
                                 </Row>
@@ -351,12 +353,9 @@ const StudentCalendar = () => {
                                     </Col>
                                 </Row>
                             </Container>
-                            <Container className='TaskListContainer' fluid>
-                                <Row>
-                                    <Col>
-                                        <TaskList />
-                                    </Col>
-                                </Row>
+                            <Container className='TaskListContainer overflow-auto' style={{height:'60%', padding:'6%'}}>
+                                        <h5 style={{textAlign:'center'}}>Task List</h5>
+                                        <TaskList setModal={setAssignmentModalShow}/>
                             </Container>
                         </div>
                     </Col>

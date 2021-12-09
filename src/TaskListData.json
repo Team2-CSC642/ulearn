@@ -5,7 +5,8 @@
         "description": "Chapters 7 and 8",
         "completed": false,
         "dueDate": "12/10/2021 11:59 PM",
-        "istatus": "Closed: 0/45 Graded"
+        "istatus": "Closed: 0/45 Graded",
+        "status": "Not Submitted"
     },
     {
         "name": "Homework 4",
@@ -13,7 +14,8 @@
         "description": "Submit PDF through Github",
         "completed": false,
         "dueDate": "12/10/2021 11:59 PM",
-        "istatus": "Open: 10/45 submitted"
+        "istatus": "Closed: 0/45 Graded",
+        "status": "Not Submitted"
     },
     {
         "name": "Report 2",
@@ -21,7 +23,8 @@
         "description": "5 pages minimum",
         "completed": false,
         "dueDate": "12/10/2021 11:59 PM",
-        "istatus": "Open: 20/45 submitted"
+        "istatus": "Closed: 0/45 Graded",
+        "status": "Not Submitted"
     },
     {
         "name": "Assignment 1",
@@ -29,7 +32,8 @@
         "description": "Code Stuff",
         "completed": false,
         "dueDate": "12/10/2021 11:59 PM",
-        "istatus": "Open: 22/45 submitted"
+        "istatus": "Closed: 0/45 Graded",
+        "status": "Not Submitted"
     },
     {
         "name": "Assignment 2",
@@ -37,6 +41,7 @@
         "description": "Code Stuff",
         "completed": false,
         "dueDate": "12/10/2021 11:59 PM",
-        "istatus": "Open: 30/45 submitted"
+        "istatus": "Closed: 0/45 Graded",
+        "status": "Not Submitted"
     }
 ]

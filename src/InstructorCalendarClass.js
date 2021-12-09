@@ -59,7 +59,7 @@ const InstructorCalendarClass = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5>Logout</h5>
+                        <h5 name='logout'><a href='http://localhost:3000/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
