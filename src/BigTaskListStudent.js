@@ -15,7 +15,7 @@ const BigTaskListStudent = ({ setModal }) => {
                 <Row style={{ paddingBottom: '2%' }}>
                     <Col>
                         <Card key={task.name}>
-                            <Card.Header onClick={() => setModal(true)} style={{ cursor: 'pointer' }}><h6>{task.class} {task.name} <PencilSquare style={{marginLeft:'.5%'}}/></h6></Card.Header>
+                            <Card.Header onClick={() => setModal(true)} style={{ cursor: 'pointer' }}><h6>{task.class} {task.name} </h6></Card.Header>
                             <Card.Body className="card">
                                 <Container>
                                     <Row style={{ alignItems: 'center' }}>

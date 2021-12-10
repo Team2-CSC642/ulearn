@@ -539,10 +539,42 @@ const InstructorCalendarClass = () => {
                                         <Accordion.Item eventKey='0'>
                                             <Accordion.Header>Events</Accordion.Header>
                                             <Accordion.Body>
-                                                <ul>
-                                                    <li>Homework 1</li>
-                                                    <li>Quiz 1</li>
-                                                    <li>Discussion Post</li>
+                                            <ul>
+                                                    <Card>
+                                                        <Container style={{ backgroundColor: '#484848' }}><Card.Title style={{ marginTop: '10px', color: 'white' }}>Event 1</Card.Title></Container>
+                                                        <Card.Body>
+                                                            <Container>
+                                                                <Row style={{ alignItems: 'center' }}>
+                                                                    <Col>
+                                                                        <h5 style={{ alignSelf: 'end' }}>Date:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4' }}>
+                                                                        <Card body style={{ textAlign: 'center' }}>
+                                                                            12/15/2021 11:59pm
+                                                                        </Card>
+                                                                    </Col>
+                                                                </Row>
+                                                                <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                    <Col>
+                                                                        <h5 style={{ alignSelf: 'end' }}>Description:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4' }}>
+                                                                        <Card body style={{ textAlign: 'center' }}>
+                                                                            Lorem Ipsum
+                                                                        </Card>
+                                                                    </Col>
+                                                                </Row>
+                                                                <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                    <Col>
+                                                                        <h5>Materials:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                                        <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
+                                                                    </Col>
+                                                                </Row>
+                                                            </Container>
+                                                        </Card.Body>
+                                                    </Card>
                                                 </ul>
                                             </Accordion.Body>
                                         </Accordion.Item>

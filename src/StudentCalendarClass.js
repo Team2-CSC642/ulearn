@@ -7,13 +7,14 @@ import Carousel from 'react-bootstrap/Carousel'
 import starslide from './checkup.jpg';
 import Accordion from 'react-bootstrap/Accordion';
 import logo from './sfStateLogo.png';
-import {CircleFill, FileEarmarkPdf, FileEarmarkPlay } from 'react-bootstrap-icons';
+import { CircleFill, FileEarmarkPdf, FileEarmarkPlay } from 'react-bootstrap-icons';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import differenceInCalendarDays from 'date-fns/differenceInCalendarDays';
 import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import BigTaskListStudent from './BigTaskListStudent';
 
 const datesToAddAssignmentsTo = [new Date(2021, 11, 25), new Date(2021, 11, 24), new Date(2021, 11, 15)];
 const datesToAddQuizzesTo = [new Date(2021, 11, 10)];
@@ -30,7 +31,7 @@ const StudentCalendarClass = () => {
     function tileContent({ date, view }) {
         if (view === 'month') {
             if (datesToAddAssignmentsTo.find(dDate => isSameDay(dDate, date))) {
-                return <CircleFill size={12} color='#0D6EFD' style={{ marginLeft: '5px'}} className='assignmentCircle' onClick={() => setAssignmentModalShow(true)} />;
+                return <CircleFill size={12} color='#0D6EFD' style={{ marginLeft: '5px' }} className='assignmentCircle' onClick={() => setAssignmentModalShow(true)} />;
             }
             if (datesToAddQuizzesTo.find(dDate => isSameDay(dDate, date))) {
                 return <CircleFill size={12} color='#DD3544' style={{ marginLeft: '5px' }} onClick={() => setQuizModalShow(true)} />;
@@ -54,7 +55,7 @@ const StudentCalendarClass = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5 name='logout'><a href='http://localhost:3000/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
+                        <h5 name='logout'><a href='/' style={{ color: 'white', textDecoration: 'none' }}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -120,7 +121,7 @@ const StudentCalendarClass = () => {
                     <Col className='CenterCol-7' xs={7}>
                         <div className='CenterContent'>
                             <Container className='overflow-auto' style={{ height: '100%' }}>
-                            <Modal
+                                <Modal
                                     size='lg'
                                     aria-labelledby='contained-modal-title-vcenter'
                                     centered
@@ -262,7 +263,7 @@ const StudentCalendarClass = () => {
                                                     <Card body>12/29/2021 11:59 PM</Card>
                                                 </Col>
                                             </Row>
-                                            <Row style={{ alignItems: 'center', marginTop:'10px' }}>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                                 <Col>
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
@@ -317,12 +318,67 @@ const StudentCalendarClass = () => {
                                     </Accordion>
                                     <Accordion>
                                         <Accordion.Item eventKey='0'>
-                                            <Accordion.Header>Assignments/Tests</Accordion.Header>
+                                            <Accordion.Header>Assignments</Accordion.Header>
+                                            <Accordion.Body>
+                                                <BigTaskListStudent />
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
+                                    <Accordion>
+                                        <Accordion.Item eventKey='0'>
+                                            <Accordion.Header>Tests</Accordion.Header>
                                             <Accordion.Body>
                                                 <ul>
-                                                    <li>Assignment 1</li>
-                                                    <li>Quiz 1</li>
-                                                    <li>Assignment 2</li>
+                                                    <Card>
+                                                        <Container style={{ backgroundColor: '#484848' }}><Card.Title style={{ marginTop: '10px', color: 'white' }}>Quiz 1</Card.Title></Container>
+                                                        <Card.Body>
+                                                            <Container>
+                                                                <Row style={{ alignItems: 'center' }}>
+                                                                    <Col>
+                                                                        <h5 style={{ alignSelf: 'end' }}>Due Date:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4' }}>
+                                                                        <Card body style={{ textAlign: 'center' }}>
+                                                                            12/15/2021 11:59pm
+                                                                        </Card>
+                                                                    </Col>
+                                                                </Row>
+                                                                <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                    <Col>
+                                                                        <h5 style={{ alignSelf: 'end' }}>Description:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4' }}>
+                                                                        <Card body style={{ textAlign: 'center' }}>
+                                                                            Lorem Ipsum
+                                                                        </Card>
+                                                                    </Col>
+                                                                </Row>
+                                                                <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                    <Col>
+                                                                        <h5>Materials:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                                        <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
+                                                                    </Col>
+                                                                </Row>
+                                                                <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                    <Col>
+                                                                        <h5>Status:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                                        <Card body>
+                                                                            Not Submitted
+                                                                        </Card>
+                                                                    </Col>
+                                                                </Row>
+                                                                <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                    <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                                        <Button href='/createQuiz' style={{ marginLeft: '5%' }}>Begin Test</Button>
+                                                                    </Col>
+                                                                </Row>
+                                                            </Container>
+                                                        </Card.Body>
+                                                    </Card>
                                                 </ul>
                                             </Accordion.Body>
                                         </Accordion.Item>
@@ -332,9 +388,41 @@ const StudentCalendarClass = () => {
                                             <Accordion.Header>Events</Accordion.Header>
                                             <Accordion.Body>
                                                 <ul>
-                                                    <li>Assignment 1</li>
-                                                    <li>Quiz 1</li>
-                                                    <li>Assignment 2</li>
+                                                    <Card>
+                                                        <Container style={{ backgroundColor: '#484848' }}><Card.Title style={{ marginTop: '10px', color: 'white' }}>Event 1</Card.Title></Container>
+                                                        <Card.Body>
+                                                            <Container>
+                                                                <Row style={{ alignItems: 'center' }}>
+                                                                    <Col>
+                                                                        <h5 style={{ alignSelf: 'end' }}>Date:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4' }}>
+                                                                        <Card body style={{ textAlign: 'center' }}>
+                                                                            12/15/2021 11:59pm
+                                                                        </Card>
+                                                                    </Col>
+                                                                </Row>
+                                                                <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                    <Col>
+                                                                        <h5 style={{ alignSelf: 'end' }}>Description:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4' }}>
+                                                                        <Card body style={{ textAlign: 'center' }}>
+                                                                            Lorem Ipsum
+                                                                        </Card>
+                                                                    </Col>
+                                                                </Row>
+                                                                <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                    <Col>
+                                                                        <h5>Materials:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                                        <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
+                                                                    </Col>
+                                                                </Row>
+                                                            </Container>
+                                                        </Card.Body>
+                                                    </Card>
                                                 </ul>
                                             </Accordion.Body>
                                         </Accordion.Item>
@@ -350,7 +438,7 @@ const StudentCalendarClass = () => {
                             <Container className='CarouselContainer'>
                                 <Row>
                                     <Col>
-                                    <h5 style={{textAlign:'center'}}>Announcements</h5>
+                                        <h5 style={{ textAlign: 'center' }}>Announcements</h5>
                                         <Carousel className='Carousel'>
                                             <Carousel.Item>
                                                 <img alt="Announcement Slide" className='d-block w-100' src={starslide} />
@@ -378,7 +466,7 @@ const StudentCalendarClass = () => {
                             <Container>
                                 <Row>
                                     <Col>
-                                    <Calendar prev2Label={null} next2Label={null} className='SideCalendar' tileContent={tileContent} />
+                                        <Calendar prev2Label={null} next2Label={null} className='SideCalendar' tileContent={tileContent} />
                                     </Col>
                                 </Row>
                             </Container>
