@@ -11,18 +11,18 @@ const Login =() =>{
     const ShareValue = () =>{
        
         if(`${userType}`.toLowerCase() === "student"){
-            routeName ="/ulearn/#/sTaskList"
-            setRoute(nextRoute => "/ulearn/#/sTaskList");
+            routeName ="/sTaskList"
+            setRoute(nextRoute => "/sTaskList");
             // alert(`welecome Student`);
             
         }else if(`${userType}`.toLowerCase()==="professor"){
-            routeName ="/ulearn/#/iTaskList"
-            setRoute(nextRoute => "/ulearn/#/iTaskList");
+            routeName ="/iTaskList"
+            setRoute(nextRoute => "/iTaskList");
             // alert(`Welcome Professor`);
         }else{
             alert(`Invalid Login`);
-            routeName ="/ulearn/#/login"
-            setRoute(nextRoute => "/ulearn/#/login");
+            routeName ="/login"
+            setRoute(nextRoute => "/login");
         }
     }
 

@@ -299,7 +299,7 @@ const StudentTaskList = () => {
                                     </Col>
                                     <hr />
                                 </Row>
-                                <Row className='overflow-auto' style={{height:'80%'}}>
+                                <Row className='overflow-auto' style={{height:'90%'}}>
                                     <BigTaskListStudent setModal={setAssignmentModalShow}/>
                                 </Row>
                             </Container>

@@ -400,7 +400,7 @@ const InstructorTaskList = () => {
                                     </Col>
                                     <hr />
                                 </Row>
-                                <Row className='overflow-auto' style={{height:'80%'}}>
+                                <Row className='overflow-auto' style={{height:'90%'}}>
                                     <BigTaskList setModal={setAssignmentModalShow}/>
                                 </Row>
                             </Container>
