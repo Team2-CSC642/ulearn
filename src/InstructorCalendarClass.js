@@ -15,7 +15,8 @@ import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown'
+import Dropdown from 'react-bootstrap/Dropdown';
+import BigTaskListGrading from './BigTaskListGrading'
 
 const datesToAddAssignmentsTo = [new Date(2021, 11, 25), new Date(2021, 11, 24), new Date(2021, 11, 15)];
 const datesToAddQuizzesTo = [new Date(2021, 11, 10)];
@@ -59,7 +60,7 @@ const InstructorCalendarClass = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5 name='logout'><a href='http://localhost:3000/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
+                        <h5 name='logout'><a href='http://localhost:3000/' style={{ color: 'white', textDecoration: 'none' }}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -471,14 +472,7 @@ const InstructorCalendarClass = () => {
                                         <Accordion.Item eventKey='0'>
                                             <Accordion.Header>Assignments</Accordion.Header>
                                             <Accordion.Body>
-                                                <ul>
-                                                    <Card>
-                                                        <Container style={{backgroundColor:'#484848'}}><Card.Title style={{marginTop:'10px', color:'white'}}>Assignment 1<PencilSquare style={{ marginLeft:'10px' }} color='white'/></Card.Title></Container>
-                                                        <Card.Body>
-                                                            
-                                                        </Card.Body>
-                                                    </Card>
-                                                </ul>
+                                                <BigTaskListGrading setModal={setAssignmentModalShow} />
                                             </Accordion.Body>
                                         </Accordion.Item>
                                     </Accordion>
@@ -487,9 +481,56 @@ const InstructorCalendarClass = () => {
                                             <Accordion.Header>Tests</Accordion.Header>
                                             <Accordion.Body>
                                                 <ul>
-                                                    <li>Homework 1</li>
-                                                    <li>Quiz 1</li>
-                                                    <li>Discussion Post</li>
+                                                    <Card>
+                                                        <Container style={{ backgroundColor: '#484848' }}><Card.Title style={{ marginTop: '10px', color: 'white' }}>Quiz 1<PencilSquare style={{ marginLeft: '10px' }} color='white' /></Card.Title></Container>
+                                                        <Card.Body>
+                                                            <Container>
+                                                                <Row style={{ alignItems: 'center' }}>
+                                                                    <Col>
+                                                                        <h5 style={{ alignSelf: 'end' }}>Due Date:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4' }}>
+                                                                        <Card body style={{ textAlign: 'center' }}>
+                                                                            12/15/2021 11:59pm
+                                                                        </Card>
+                                                                    </Col>
+                                                                </Row>
+                                                                <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                    <Col>
+                                                                        <h5 style={{ alignSelf: 'end' }}>Description:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4' }}>
+                                                                        <Card body style={{ textAlign: 'center' }}>
+                                                                            Lorem Ipsum
+                                                                        </Card>
+                                                                    </Col>
+                                                                </Row>
+                                                                <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                    <Col>
+                                                                        <h5>Materials:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                                        <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
+                                                                    </Col>
+                                                                </Row>
+                                                                <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                    <Col>
+                                                                        <h5>Status:</h5>
+                                                                    </Col>
+                                                                    <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                                        <Card body>
+                                                                            0/45 Submission
+                                                                        </Card>
+                                                                    </Col>
+                                                                </Row>
+                                                                <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                    <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                                        <Button href='/createQuiz' style={{ marginLeft: '5%' }}>Edit Quiz</Button>
+                                                                    </Col>
+                                                                </Row>
+                                                            </Container>
+                                                        </Card.Body>
+                                                    </Card>
                                                 </ul>
                                             </Accordion.Body>
                                         </Accordion.Item>

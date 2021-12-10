@@ -10,6 +10,7 @@ import StudentCalendarClass from './StudentCalendarClass';
 import Login from './loginPage';
 import Quiz from './Quiz';
 import InstructorTaskList from './InstructorTaskList';
+import Grading from './Grading';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/iCalendarClass" element={<InstructorCalendarClass/>}/>
             <Route path="/sCalendarClass" element={<StudentCalendarClass/>}/>
             <Route path="/createQuiz" element={<Quiz/>}/>
+            <Route path="/grading" element={<Grading/>}/>
           </Routes>
         </Router>
   );

@@ -1,6 +1,6 @@
 [
     {
-        "name": "Quiz 1",
+        "name": "Assignment 1",
         "class": "CSC 256",
         "description": "Chapters 7 and 8",
         "completed": false,
@@ -27,7 +27,7 @@
         "status": "Not Submitted"
     },
     {
-        "name": "Assignment 1",
+        "name": "Assignment 3",
         "class": "CSC 123",
         "description": "Code Stuff",
         "completed": false,

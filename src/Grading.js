@@ -14,7 +14,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { render } from '@testing-library/react';
 
-const Quiz = () => {
+const Grading = () => {
     return (
         <div className='Backdrop'>
             <Container className='TopNavContainer' fluid>
@@ -93,77 +93,10 @@ const Quiz = () => {
                             <Container>
                                 <Row>
                                     <Col>
-                                        <h1>CSC 420</h1>
+                                        <h1>Grading Assignment 1</h1>
                                     </Col>
                                     <hr />
-                                    <Row>
-                                        <Card>
-                                            <Row>
-                                                <Col></Col>
-                                                <Col>
-                                                    <Card.Title style={{ padding: '10px' }}><p style={{ display: 'inline', marginLeft: '16px' }}>Creating Quiz 1</p></Card.Title>
-                                                </Col>
-                                                <Col>
-                                                    <Button variant="primary" className="AddQuestion">+ Add Question</Button>{' '}
-                                                </Col>
-                                            </Row>
-                                        </Card>
-                                        <Card>
-                                            <Card.Body>
-                                                <DropdownButton className="mb-5 mt-3 w-25 mx-auto" title='Multiple Choice' variant='outline-primary'>
-                                                    <Dropdown.Item as='button' >Multiple Choice</Dropdown.Item>
-                                                    <Dropdown.Item as='button' >Short Response</Dropdown.Item>
-                                                </DropdownButton>
-                                                <InputGroup className="mb-5 mt-3 w-75 mx-auto">
-                                                    <FormControl className="text-center"
-                                                        placeholder="Enter Description"
-                                                    />
-                                                </InputGroup>
-                                                <Form.Text className="text-muted">
-                                                    Select your desired answer.
-                                                </Form.Text>
-                                                <InputGroup className="mb-2 w-50 mx-auto">
-                                                    <InputGroup.Radio aria-label="Radio button for following text input" />
-                                                    <FormControl aria-label="Text input with radio button" placeholder="Answer 1" />
-                                                </InputGroup>
-                                                <InputGroup className="mb-2 w-50 mx-auto">
-                                                    <InputGroup.Radio aria-label="Radio button for following text input" />
-                                                    <FormControl aria-label="Text input with radio button" placeholder="Answer 2" />
-                                                </InputGroup>
-                                                <InputGroup className="mb-2 w-50 mx-auto">
-                                                    <InputGroup.Radio aria-label="Radio button for following text input" />
-                                                    <FormControl aria-label="Text input with radio button" placeholder="Answer 3" />
-                                                </InputGroup>
-                                                <InputGroup className="w-50  mx-auto">
-                                                    <InputGroup.Radio aria-label="Radio button for following text input" />
-                                                    <FormControl aria-label="Text input with radio button" placeholder="Answer 4" />
-                                                </InputGroup>
-                                            </Card.Body>
-                                        </Card>
-                                        <Card className="mt-3 w-50 mx-auto QuizOptions">
-                                            <Row>
-                                                <Col>
-                                                    <Button variant="primary" href="/iCalendarClass" className="CancelQuiz">Cancel</Button>{' '}
-                                                </Col>
-                                                <Col>
-                                                    <Form className="mt-3">
-                                                        {['radio'].map((type) => (
-                                                            <div key={`default-${type}`} className="mb-3">
-                                                                <Form.Check
-                                                                    type={type}
-                                                                    id={`default-${type}`}
-                                                                    label={`Notify Students`}
-                                                                />
-                                                            </div>
-                                                        ))}
-                                                    </Form>
-                                                </Col>
-                                                <Col>
-                                                    <Button variant="primary" className="SubmitQuiz">Submit</Button>{' '}
-                                                </Col>
-                                            </Row>
-                                        </Card>
-                                    </Row>
+                                    
                                 </Row>
                             </Container>
                         </div>
@@ -194,4 +127,4 @@ const Quiz = () => {
     );
 }
 
-export default Quiz;
+export default Grading;
