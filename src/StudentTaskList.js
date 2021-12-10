@@ -58,7 +58,7 @@ const StudentTaskList = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                    <h5 name='logout'><a href='http://localhost:3000/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
+                    <h5 name='logout'><a href='/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -293,7 +293,7 @@ const StudentTaskList = () => {
                                         <h1>Task View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                        <a style={{color:'#6C757D'}} href='http://localhost:3000/sCalendar'>
+                                        <a style={{color:'#6C757D'}} href='/sCalendar'>
                                             <CalendarEvent size={48} />
                                         </a>
                                     </Col>

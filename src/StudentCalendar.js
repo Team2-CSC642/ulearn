@@ -57,7 +57,7 @@ const StudentCalendar = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5>Logout</h5>
+                        <h5><a href='/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -309,7 +309,7 @@ const StudentCalendar = () => {
                                         <h1>Calendar View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                    <a style={{color:'#6C757D'}} href='http://localhost:3000/sTaskList'>
+                                    <a style={{color:'#6C757D'}} href='/sTaskList'>
                                             <List size={48} />
                                         </a>
                                     </Col>

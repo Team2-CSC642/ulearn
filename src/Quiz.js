@@ -24,7 +24,7 @@ const Quiz = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5>Logout</h5>
+                        <h5><a href='/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>

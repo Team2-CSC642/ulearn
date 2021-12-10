@@ -60,7 +60,7 @@ const InstructorCalendar = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5 name='logout'><a href='http://localhost:3000/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
+                        <h5 name='logout'><a href='/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -411,7 +411,7 @@ const InstructorCalendar = () => {
                                         <h1>Calendar View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                        <a style={{color:'#6C757D'}} href='http://localhost:3000/iTaskList'>
+                                        <a style={{color:'#6C757D'}} href='/iTaskList'>
                                             <List size={48} />
                                         </a>
                                     </Col>
