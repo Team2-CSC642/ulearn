@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/ulearn/static/css/main.a08aa063.chunk.css",
-    "main.js": "/ulearn/static/js/main.9e74dc04.chunk.js",
-    "main.js.map": "/ulearn/static/js/main.9e74dc04.chunk.js.map",
+    "main.js": "/ulearn/static/js/main.deaf0356.chunk.js",
+    "main.js.map": "/ulearn/static/js/main.deaf0356.chunk.js.map",
     "runtime-main.js": "/ulearn/static/js/runtime-main.2032c90b.js",
     "runtime-main.js.map": "/ulearn/static/js/runtime-main.2032c90b.js.map",
     "static/css/2.5760bd42.chunk.css": "/ulearn/static/css/2.5760bd42.chunk.css",
-    "static/js/2.8bc84c3e.chunk.js": "/ulearn/static/js/2.8bc84c3e.chunk.js",
-    "static/js/2.8bc84c3e.chunk.js.map": "/ulearn/static/js/2.8bc84c3e.chunk.js.map",
+    "static/js/2.28e8e163.chunk.js": "/ulearn/static/js/2.28e8e163.chunk.js",
+    "static/js/2.28e8e163.chunk.js.map": "/ulearn/static/js/2.28e8e163.chunk.js.map",
     "static/js/3.64c08788.chunk.js": "/ulearn/static/js/3.64c08788.chunk.js",
     "static/js/3.64c08788.chunk.js.map": "/ulearn/static/js/3.64c08788.chunk.js.map",
     "index.html": "/ulearn/index.html",
     "static/css/2.5760bd42.chunk.css.map": "/ulearn/static/css/2.5760bd42.chunk.css.map",
     "static/css/main.a08aa063.chunk.css.map": "/ulearn/static/css/main.a08aa063.chunk.css.map",
-    "static/js/2.8bc84c3e.chunk.js.LICENSE.txt": "/ulearn/static/js/2.8bc84c3e.chunk.js.LICENSE.txt",
+    "static/js/2.28e8e163.chunk.js.LICENSE.txt": "/ulearn/static/js/2.28e8e163.chunk.js.LICENSE.txt",
     "static/media/SFState_Logo.d90ab549.png": "/ulearn/static/media/SFState_Logo.d90ab549.png",
     "static/media/banner.c9ca335d.svg": "/ulearn/static/media/banner.c9ca335d.svg",
     "static/media/checkup.c8085f08.jpg": "/ulearn/static/media/checkup.c8085f08.jpg",
@@ -26,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.2032c90b.js",
     "static/css/2.5760bd42.chunk.css",
-    "static/js/2.8bc84c3e.chunk.js",
+    "static/js/2.28e8e163.chunk.js",
     "static/css/main.a08aa063.chunk.css",
-    "static/js/main.9e74dc04.chunk.js"
+    "static/js/main.deaf0356.chunk.js"
   ]
 }
