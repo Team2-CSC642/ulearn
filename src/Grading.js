@@ -1,20 +1,25 @@
 import './Dash.css';
 import React from 'react';
-import ReactDOM from "react-dom";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Accordion from 'react-bootstrap/Accordion'
 import logo from './sfStateLogo.png';
 import Card from 'react-bootstrap/Card';
-import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { FormControl, InputGroup } from 'react-bootstrap';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { render } from '@testing-library/react';
+import { ArrowLeftSquare, FileEarmarkPdf, ArrowRightSquare } from 'react-bootstrap-icons';
 
 const Grading = () => {
+    const handleChange = (student, date, color) => {
+        setStudentSelect(student);
+        setSubmissionDate(date);
+        setSubmitColor(color);
+    }
+    const [submitColor, setSubmitColor] = React.useState('Green')
+    const [studentSelect, setStudentSelect] = React.useState('Student 1')
+    const [submissionDate, setSubmissionDate] = React.useState('Submitted 2 Days 14 hours and 37 minutes early')
     return (
         <div className='Backdrop'>
             <Container className='TopNavContainer' fluid>
@@ -96,7 +101,79 @@ const Grading = () => {
                                         <h1>Grading Assignment 1</h1>
                                     </Col>
                                     <hr />
-                                    
+                                </Row>
+                                <Row>
+                                    <Container>
+                                        <Row>
+                                            <Col><ArrowLeftSquare size={32} style={{ cursor: 'pointer' }} onClick={() => handleChange('Student 1','Submitted 2 Days 14 hours and 7 minutes early','Green')} /></Col>
+                                            <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                <DropdownButton title={studentSelect} variant='outline-primary'>
+                                                    <Dropdown.Item as='button' onClick={() => handleChange('Student 1','Submitted 2 Days 14 hours and 7 minutes early','Green')}>Student 1</Dropdown.Item>
+                                                    <Dropdown.Item as='button' onClick={() => handleChange('Student 2','Submitted 1 Days 12 hours and 37 minutes late','Red')}>Student 2</Dropdown.Item>
+                                                    <Dropdown.Item as='button' onClick={() => handleChange('Student 3','Submitted 4 Days 9 hours and 3 minutes early','Green')}>Student 3</Dropdown.Item>
+                                                    <Dropdown.Item as='button' onClick={() => handleChange('Student 4','Submitted 5 Days 1 hours and 17 minutes late','Red')}>Student 4</Dropdown.Item>
+                                                </DropdownButton>
+                                            </Col>
+                                            <Col><ArrowRightSquare size={32} style={{ cursor: 'pointer' }} onClick={() => handleChange('Student 2','Submitted 1 Days 12 hours and 37 minutes late','Red')} /></Col>
+                                        </Row>
+                                        <Row>
+                                            <Container>
+                                                <Row style={{ paddingTop: '2%' }}>
+                                                    <Col>
+                                                        <Card key='0'>
+                                                            <Card.Header style={{ cursor: 'pointer' }}><h6>{studentSelect} Assignment Submission</h6></Card.Header>
+                                                            <Card.Body className="card">
+                                                                <Container>
+                                                                    <Row style={{ alignItems: 'center' }}>
+                                                                        <Col>
+                                                                            <h5 style={{ alignSelf: 'end' }}>Submission Date:</h5>
+                                                                        </Col>
+                                                                        <Col style={{ flexGrow: '4' }}>
+                                                                            <Card body style={{ textAlign: 'center' }}>
+                                                                                <p style={{color:submitColor}}>{submissionDate}</p>
+                                                                            </Card>
+                                                                        </Col>
+                                                                    </Row>
+                                                                    <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                        <Col>
+                                                                            <h5>Submission:</h5>
+                                                                        </Col>
+                                                                        <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                                            <Card body><FileEarmarkPdf size={36} />{studentSelect} Assignment1.pdf</Card>
+                                                                        </Col>
+                                                                    </Row>
+                                                                    <Row>
+                                                                        <hr style={{marginTop:'5%'}}/>
+                                                                    </Row>
+                                                                    <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                        <Col>
+                                                                            <h5>Feedback:</h5>
+                                                                        </Col>
+                                                                        <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                                            <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%' }}></textarea>
+                                                                        </Col>
+                                                                    </Row>
+                                                                    <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                        <Col>
+                                                                            <h5>Grade:</h5>
+                                                                        </Col>
+                                                                        <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                                            <Card body><input type='number' min='0' max='100'/> /100</Card>
+                                                                        </Col>
+                                                                    </Row>
+                                                                    <Row style={{ alignItems: 'center', marginTop: '10px' }}>
+                                                                        <Col style={{ flexGrow: '4', textAlign: 'center' }}>
+                                                                            <Button href='/grading' style={{ marginLeft: '5%' }}>Save Feedback</Button>
+                                                                        </Col>
+                                                                    </Row>
+                                                                </Container>
+                                                            </Card.Body>
+                                                        </Card>
+                                                    </Col>
+                                                </Row>
+                                            </Container>
+                                        </Row>
+                                    </Container>
                                 </Row>
                             </Container>
                         </div>
