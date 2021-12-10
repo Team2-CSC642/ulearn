@@ -47,7 +47,7 @@ const StudentCalendarClass = () => {
             <Container className='TopNavContainer' fluid>
                 <Row className='TopNavRow'>
                     <Col className='Logo' >
-                        <h1><a href="/sCalendar" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
+                        <h1><a href="/ulearn/#/sCalendar" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
                     </Col>
 
                     <Col className='DashTitle'>
@@ -55,7 +55,7 @@ const StudentCalendarClass = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5 name='logout'><a href='/' style={{ color: 'white', textDecoration: 'none' }}>Logout</a></h5>
+                        <h5 name='logout'><a href='/ulearn/#/' style={{ color: 'white', textDecoration: 'none' }}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -77,7 +77,7 @@ const StudentCalendarClass = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Assignment 1</li>
@@ -89,7 +89,7 @@ const StudentCalendarClass = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Assignment 1</li>
@@ -101,7 +101,7 @@ const StudentCalendarClass = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/sCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Assignment 1</li>
@@ -373,7 +373,7 @@ const StudentCalendarClass = () => {
                                                                 </Row>
                                                                 <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                                                     <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                                        <Button href='/createQuiz' style={{ marginLeft: '5%' }}>Begin Test</Button>
+                                                                        <Button href='/ulearn/#/createQuiz' style={{ marginLeft: '5%' }}>Begin Test</Button>
                                                                     </Col>
                                                                 </Row>
                                                             </Container>

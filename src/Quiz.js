@@ -24,7 +24,7 @@ const Quiz = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5><a href='/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
+                        <h5><a href='/ulearn/#/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -45,7 +45,7 @@ const Quiz = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
@@ -58,7 +58,7 @@ const Quiz = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary'>CSC 256</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary'>CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
@@ -71,7 +71,7 @@ const Quiz = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary'>CSC 420</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary'>CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
@@ -143,7 +143,7 @@ const Quiz = () => {
                                         <Card className="mt-3 w-50 mx-auto QuizOptions">
                                             <Row>
                                                 <Col>
-                                                    <Button variant="primary" href="/iCalendarClass" className="CancelQuiz">Cancel</Button>{' '}
+                                                    <Button variant="primary" href="/ulearn/#/iCalendarClass" className="CancelQuiz">Cancel</Button>{' '}
                                                 </Col>
                                                 <Col>
                                                     <Form className="mt-3">

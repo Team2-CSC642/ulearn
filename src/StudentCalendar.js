@@ -49,7 +49,7 @@ const StudentCalendar = () => {
             <Container className='TopNavContainer' fluid>
                 <Row className='TopNavRow'>
                     <Col className='Logo' >
-                        <h1><a href="/" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
+                        <h1><a href="/ulearn/#/" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
                     </Col>
 
                     <Col className='DashTitle'>
@@ -57,7 +57,7 @@ const StudentCalendar = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5><a href='/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
+                        <h5><a href='/ulearn/#/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -79,7 +79,7 @@ const StudentCalendar = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header> <Button href="/iCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
+                                                <Accordion.Header> <Button href="/ulearn/#/iCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Homework 1</li>
@@ -91,7 +91,7 @@ const StudentCalendar = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Homework 1</li>
@@ -103,7 +103,7 @@ const StudentCalendar = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Homework 1</li>
@@ -309,7 +309,7 @@ const StudentCalendar = () => {
                                         <h1>Calendar View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                    <a style={{color:'#6C757D'}} href='/sTaskList'>
+                                    <a style={{color:'#6C757D'}} href='/ulearn/#/sTaskList'>
                                             <List size={48} />
                                         </a>
                                     </Col>

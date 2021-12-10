@@ -52,7 +52,7 @@ const InstructorCalendarClass = () => {
             <Container className='TopNavContainer' fluid>
                 <Row className='TopNavRow'>
                     <Col className='Logo' >
-                        <h1><a href="/iCalendar" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
+                        <h1><a href="/ulearn/#/iCalendar" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
                     </Col>
 
                     <Col className='DashTitle'>
@@ -60,7 +60,7 @@ const InstructorCalendarClass = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5 name='logout'><a href='/' style={{ color: 'white', textDecoration: 'none' }}>Logout</a></h5>
+                        <h5 name='logout'><a href='/ulearn/#/' style={{ color: 'white', textDecoration: 'none' }}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -82,7 +82,7 @@ const InstructorCalendarClass = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm' onClick={() => setCreateAssignmentModalShow(true)}>Quick Create</Button></li>
@@ -95,7 +95,7 @@ const InstructorCalendarClass = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary'>CSC 256</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary'>CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm' onClick={() => setCreateAssignmentModalShow(true)}>Quick Create</Button></li>
@@ -108,7 +108,7 @@ const InstructorCalendarClass = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary'>CSC 420</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary'>CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm' onClick={() => setCreateAssignmentModalShow(true)}>Quick Create</Button></li>
@@ -525,7 +525,7 @@ const InstructorCalendarClass = () => {
                                                                 </Row>
                                                                 <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                                                     <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                                        <Button href='/createQuiz' style={{ marginLeft: '5%' }}>Edit Quiz</Button>
+                                                                        <Button href='/ulearn/#/createQuiz' style={{ marginLeft: '5%' }}>Edit Quiz</Button>
                                                                     </Col>
                                                                 </Row>
                                                             </Container>

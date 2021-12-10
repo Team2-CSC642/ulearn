@@ -52,7 +52,7 @@ const InstructorTaskList = () => {
             <Container className='TopNavContainer' fluid>
                 <Row className='TopNavRow'>
                     <Col className='Logo' >
-                        <h1><a href="/" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
+                        <h1><a href="/ulearn/#/" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
                     </Col>
 
                     <Col className='DashTitle'>
@@ -60,7 +60,7 @@ const InstructorTaskList = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5 name='logout'><a href='/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
+                        <h5 name='logout'><a href='/ulearn/#/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -82,7 +82,7 @@ const InstructorTaskList = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header> <Button href="/iCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
+                                                <Accordion.Header> <Button href="/ulearn/#/iCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm' onClick={() => setCreateAssignmentModalShow(true)}>Quick Create</Button></li>
@@ -95,7 +95,7 @@ const InstructorTaskList = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
@@ -108,7 +108,7 @@ const InstructorTaskList = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
@@ -394,7 +394,7 @@ const InstructorTaskList = () => {
                                         <h1>Task View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                        <a style={{color:'#6C757D'}} href='/iCalendar'>
+                                        <a style={{color:'#6C757D'}} href='/ulearn/#/iCalendar'>
                                             <CalendarEvent size={48} />
                                         </a>
                                     </Col>

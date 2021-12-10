@@ -30,7 +30,7 @@ const Home = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5><a style={{color:'white',textDecoration:'none'}} name='login' href="/login">Login</a></h5>
+                        <h5><a style={{color:'white',textDecoration:'none'}} name='login' href="/ulearn/#/login">Login</a></h5>
                         <h5>Forgot Password?</h5>
                     </Col>
                 </Row>

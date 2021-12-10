@@ -50,7 +50,7 @@ const Grading = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary' active>CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
@@ -63,7 +63,7 @@ const Grading = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary'>CSC 256</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary'>CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
@@ -76,7 +76,7 @@ const Grading = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/iCalendarClass" variant='outline-primary'>CSC 420</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary'>CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li><Button variant='outline-primary' size='sm'>Quick Create</Button></li>
@@ -163,7 +163,7 @@ const Grading = () => {
                                                                     </Row>
                                                                     <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                                                         <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                                            <Button href='/grading' style={{ marginLeft: '5%' }}>Save Feedback</Button>
+                                                                            <Button href='/ulearn/#/grading' style={{ marginLeft: '5%' }}>Save Feedback</Button>
                                                                         </Col>
                                                                     </Row>
                                                                 </Container>
