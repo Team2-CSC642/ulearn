@@ -320,7 +320,7 @@ const StudentCalendarClass = () => {
                                         <Accordion.Item eventKey='0'>
                                             <Accordion.Header>Assignments</Accordion.Header>
                                             <Accordion.Body>
-                                                <BigTaskListStudent />
+                                                <BigTaskListStudent setModal={setAssignmentModalShow} />
                                             </Accordion.Body>
                                         </Accordion.Item>
                                     </Accordion>

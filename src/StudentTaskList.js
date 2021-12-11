@@ -80,7 +80,7 @@ const StudentTaskList = () => {
                                     <Col>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header> <Button href="/ulearn/#/iCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
+                                                <Accordion.Header> <Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Homework 1</li>
@@ -92,7 +92,7 @@ const StudentTaskList = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Homework 1</li>
@@ -104,7 +104,7 @@ const StudentTaskList = () => {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
-                                                <Accordion.Header><Button href="/ulearn/#/iCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
+                                                <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body>
                                                     <ul>
                                                         <li>Homework 1</li>
