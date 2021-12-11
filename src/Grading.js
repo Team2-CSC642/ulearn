@@ -25,7 +25,7 @@ const Grading = () => {
             <Container className='TopNavContainer' fluid>
                 <Row className='TopNavRow'>
                     <Col className='Logo' >
-                        <h1>uLearn</h1>
+                        <h1><a href="/ulearn/#/iTaskList" style={{ textDecoration: 'none', color: 'white' }}>uLearn</a></h1>
                     </Col>
 
                     <Col className='DashOptions'>
