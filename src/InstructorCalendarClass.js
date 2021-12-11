@@ -541,7 +541,7 @@ const InstructorCalendarClass = () => {
                                             <Accordion.Body>
                                             <ul>
                                                     <Card>
-                                                        <Container style={{ backgroundColor: '#484848' }}><Card.Title style={{ marginTop: '10px', color: 'white' }}>Event 1</Card.Title></Container>
+                                                        <Container style={{ backgroundColor: '#484848' }}><Card.Title onClick={()=>setEventModalShow(true)} style={{ marginTop: '10px', color: 'white' }}>Event 1<PencilSquare style={{ marginLeft: '10px' }} color='white' /></Card.Title></Container>
                                                         <Card.Body>
                                                             <Container>
                                                                 <Row style={{ alignItems: 'center' }}>
