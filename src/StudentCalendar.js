@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel'
 import starslide from './checkup.jpg';
-import ListGroup from 'react-bootstrap/ListGroup';
 import Accordion from 'react-bootstrap/Accordion';
 import logo from './sfStateLogo.png';
 import { List, CircleFill, FileEarmarkPdf } from 'react-bootstrap-icons';
@@ -15,7 +14,8 @@ import differenceInCalendarDays from 'date-fns/differenceInCalendarDays';
 import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover';
 import TaskList from './TaskList.js';
 
 const datesToAddAssignmentsTo = [new Date(2021, 11, 25), new Date(2021, 11, 24), new Date(2021, 11, 15)];
@@ -27,6 +27,7 @@ function isSameDay(a, b) {
 }
 
 const StudentCalendar = () => {
+
     const [assignmentModalShow, setAssignmentModalShow] = React.useState(false);
     const [quizModalShow, setQuizModalShow] = React.useState(false);
     const [eventModalShow, setEventModalShow] = React.useState(false);
@@ -44,6 +45,16 @@ const StudentCalendar = () => {
         }
     }
 
+    const popover = (
+        <Popover id="popover-basic">
+            <Popover.Header as="h3">CSC 123 Grades</Popover.Header>
+            <Popover.Body>
+                Overall Grade: 95.42%
+                
+            </Popover.Body>
+        </Popover>
+    );
+
     return (
         <div className='Backdrop'>
             <Container className='TopNavContainer' fluid>
@@ -57,7 +68,7 @@ const StudentCalendar = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5><a href='/ulearn/#/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
+                        <h5><a href='/ulearn/#/' style={{ color: 'white', textDecoration: 'none' }}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -80,36 +91,45 @@ const StudentCalendar = () => {
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
                                                 <Accordion.Header> <Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
-                                                <Accordion.Body>
-                                                    <ul>
-                                                        <li>Homework 1</li>
-                                                        <li>Quiz 1</li>
-                                                        <li>Discussion Post</li>
+                                                <Accordion.Body style={{textAlign:'center'}}>
+                                                    <ul style={{textAlign:'left'}}>
+                                                        <li>Homework 1 [100/100]</li>
+                                                        <li>Quiz 1 [12/15]</li>
+                                                        <li>Discussion Post [Not Graded]</li>
                                                     </ul>
+                                                    <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+                                                        <Button variant="outline-secondary">Grades</Button>
+                                                    </OverlayTrigger>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
                                                 <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
-                                                <Accordion.Body>
-                                                    <ul>
-                                                        <li>Homework 1</li>
-                                                        <li>Quiz 1</li>
-                                                        <li>Discussion Post</li>
+                                                <Accordion.Body style={{textAlign:'center'}}>
+                                                    <ul style={{textAlign:'left'}}>
+                                                        <li>Homework 1 [100/100]</li>
+                                                        <li>Quiz 1 [12/15]</li>
+                                                        <li>Discussion Post [Not Graded]</li>
                                                     </ul>
+                                                    <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+                                                        <Button variant="outline-secondary">Grades</Button>
+                                                    </OverlayTrigger>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
                                                 <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
-                                                <Accordion.Body>
-                                                    <ul>
-                                                        <li>Homework 1</li>
-                                                        <li>Quiz 1</li>
-                                                        <li>Discussion Post</li>
+                                                <Accordion.Body style={{textAlign:'center'}}>
+                                                    <ul style={{textAlign:'left'}}>
+                                                        <li>Homework 1 [100/100]</li>
+                                                        <li>Quiz 1 [12/15]</li>
+                                                        <li>Discussion Post [Not Graded]</li>
                                                     </ul>
+                                                    <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+                                                        <Button variant="outline-secondary">Grades</Button>
+                                                    </OverlayTrigger>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
@@ -265,7 +285,7 @@ const StudentCalendar = () => {
                                                     <Card body>12/29/2021 11:59 PM</Card>
                                                 </Col>
                                             </Row>
-                                            <Row style={{ alignItems: 'center', marginTop:'10px' }}>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                                 <Col>
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
@@ -309,7 +329,7 @@ const StudentCalendar = () => {
                                         <h1>Calendar View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                    <a style={{color:'#6C757D'}} href='/ulearn/#/sTaskList'>
+                                        <a style={{ color: '#6C757D' }} href='/ulearn/#/sTaskList'>
                                             <List size={48} />
                                         </a>
                                     </Col>
@@ -328,7 +348,7 @@ const StudentCalendar = () => {
                             <Container className='CarouselContainer'>
                                 <Row>
                                     <Col>
-                                    <h5 style={{textAlign:'center'}}>Announcements</h5>
+                                        <h5 style={{ textAlign: 'center' }}>Announcements</h5>
                                         <Carousel className='Carousel'>
                                             <Carousel.Item>
                                                 <img alt="Announcement Slide" className='d-block w-100' src={starslide} />
@@ -353,9 +373,9 @@ const StudentCalendar = () => {
                                     </Col>
                                 </Row>
                             </Container>
-                            <Container className='TaskListContainer overflow-auto' style={{height:'60%', padding:'6%'}}>
-                                        <h5 style={{textAlign:'center'}}>Task List</h5>
-                                        <TaskList setModal={setAssignmentModalShow}/>
+                            <Container className='TaskListContainer overflow-auto' style={{ height: '60%', padding: '6%' }}>
+                                <h5 style={{ textAlign: 'center' }}>Task List</h5>
+                                <TaskList setModal={setAssignmentModalShow} />
                             </Container>
                         </div>
                     </Col>

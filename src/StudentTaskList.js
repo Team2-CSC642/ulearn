@@ -16,7 +16,8 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
-
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover';
 import BigTaskListStudent from './BigTaskListStudent';
 
 const datesToAddAssignmentsTo = [new Date(2021, 11, 25), new Date(2021, 11, 24), new Date(2021, 11, 15)];
@@ -44,6 +45,16 @@ const StudentTaskList = () => {
             }
         }
     }
+
+    const popover = (
+        <Popover id="popover-basic">
+            <Popover.Header as="h3">CSC 123 Grades</Popover.Header>
+            <Popover.Body>
+                Overall Grade: 95.42%
+                
+            </Popover.Body>
+        </Popover>
+    );
 
     return (
         <div className='Backdrop'>
@@ -81,36 +92,45 @@ const StudentTaskList = () => {
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
                                                 <Accordion.Header> <Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
-                                                <Accordion.Body>
-                                                    <ul>
-                                                        <li>Homework 1</li>
-                                                        <li>Quiz 1</li>
-                                                        <li>Discussion Post</li>
+                                                <Accordion.Body style={{textAlign:'center'}}>
+                                                    <ul style={{textAlign:'left'}}>
+                                                        <li>Homework 1 [100/100]</li>
+                                                        <li>Quiz 1 [12/15]</li>
+                                                        <li>Discussion Post [Not Graded]</li>
                                                     </ul>
+                                                    <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+                                                        <Button variant="outline-secondary">Grades</Button>
+                                                    </OverlayTrigger>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
                                                 <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
-                                                <Accordion.Body>
-                                                    <ul>
-                                                        <li>Homework 1</li>
-                                                        <li>Quiz 1</li>
-                                                        <li>Discussion Post</li>
+                                                <Accordion.Body style={{textAlign:'center'}}>
+                                                    <ul style={{textAlign:'left'}}>
+                                                        <li>Homework 1 [100/100]</li>
+                                                        <li>Quiz 1 [12/15]</li>
+                                                        <li>Discussion Post [Not Graded]</li>
                                                     </ul>
+                                                    <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+                                                        <Button variant="outline-secondary">Grades</Button>
+                                                    </OverlayTrigger>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
                                                 <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
-                                                <Accordion.Body>
-                                                    <ul>
-                                                        <li>Homework 1</li>
-                                                        <li>Quiz 1</li>
-                                                        <li>Discussion Post</li>
+                                                <Accordion.Body style={{textAlign:'center'}}>
+                                                    <ul style={{textAlign:'left'}}>
+                                                        <li>Homework 1 [100/100]</li>
+                                                        <li>Quiz 1 [12/15]</li>
+                                                        <li>Discussion Post [Not Graded]</li>
                                                     </ul>
+                                                    <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+                                                        <Button variant="outline-secondary">Grades</Button>
+                                                    </OverlayTrigger>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
