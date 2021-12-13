@@ -58,7 +58,7 @@ const BigTaskList = ({ setModal }) => {
                                     </Row>
                                     <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                         <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                            <Button style={{marginLeft:'5%'}}>View Submissions</Button>
+                                            <Button href='/ulearn/#/grading' style={{marginLeft:'5%'}}>View Submissions</Button>
                                         </Col>
                                     </Row>
                                 </Container>
