@@ -93,9 +93,9 @@ const StudentCalendar = () => {
                                                 <Accordion.Header> <Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
                                                 <Accordion.Body style={{textAlign:'center'}}>
                                                     <ul style={{textAlign:'left'}}>
-                                                        <li>Homework 1 [100/100]</li>
-                                                        <li>Quiz 1 [12/15]</li>
-                                                        <li>Discussion Post [Not Graded]</li>
+                                                        <li>Homework 1 [Submitted]</li>
+                                                        <li>Quiz 1 [Graded]</li>
+                                                        <li>Discussion Post [Not Submitted]</li>
                                                     </ul>
                                                     <OverlayTrigger trigger="click" placement="right" overlay={popover}>
                                                         <Button variant="outline-secondary">Grades</Button>
@@ -108,9 +108,9 @@ const StudentCalendar = () => {
                                                 <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
                                                 <Accordion.Body style={{textAlign:'center'}}>
                                                     <ul style={{textAlign:'left'}}>
-                                                        <li>Homework 1 [100/100]</li>
-                                                        <li>Quiz 1 [12/15]</li>
-                                                        <li>Discussion Post [Not Graded]</li>
+                                                        <li>Homework 1 [Submitted]</li>
+                                                        <li>Quiz 1 [Graded]</li>
+                                                        <li>Discussion Post [Not Submitted]</li>
                                                     </ul>
                                                     <OverlayTrigger trigger="click" placement="right" overlay={popover}>
                                                         <Button variant="outline-secondary">Grades</Button>
@@ -123,9 +123,9 @@ const StudentCalendar = () => {
                                                 <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
                                                 <Accordion.Body style={{textAlign:'center'}}>
                                                     <ul style={{textAlign:'left'}}>
-                                                        <li>Homework 1 [100/100]</li>
-                                                        <li>Quiz 1 [12/15]</li>
-                                                        <li>Discussion Post [Not Graded]</li>
+                                                        <li>Homework 1 [Submitted]</li>
+                                                        <li>Quiz 1 [Graded]</li>
+                                                        <li>Discussion Post [Not Submitted]</li>
                                                     </ul>
                                                     <OverlayTrigger trigger="click" placement="right" overlay={popover}>
                                                         <Button variant="outline-secondary">Grades</Button>
