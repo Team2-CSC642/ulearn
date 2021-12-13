@@ -43,7 +43,7 @@ const Home = () => {
                             <h1> uLearn </h1>
                             <h3> What will uLearn today? </h3>
                             <h2 className="mt-5"> A new and improved way to keep college students on track in their studies </h2>
-                            <button href="/ulearn/#/login" type="button" class="btn btn-dark mt-5">Get Organized</button>
+                            <button type="button" class="btn btn-dark mt-5"><a style={{color:'white', textDecoration:'none'}}href='/ulearn/#/login'>Get Organized</a></button>
                         </Col>
                         <Col>
                             <Image className="homeBanner"src={banner} fluid/>
