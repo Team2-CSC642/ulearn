@@ -308,7 +308,7 @@ const StudentCalendarClass = () => {
                                         <Accordion.Item eventKey='0' style={{ textAlign: 'center' }}>
                                             <Accordion.Header>Materials</Accordion.Header>
                                             <Accordion.Body>
-                                                <ul>
+                                                <ul style={{listStyleType:'none'}}>
                                                     <li style={{ paddingBottom: '10px' }}><FileEarmarkPdf size={36} />Syllabus.pdf</li>
                                                     <li style={{ paddingBottom: '10px' }}><FileEarmarkPlay size={36} />Lecture1.pdf </li>
                                                     <li><FileEarmarkPlay size={36} />Lecture2.pdf </li>

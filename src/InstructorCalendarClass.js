@@ -460,7 +460,7 @@ const InstructorCalendarClass = () => {
                                         <Accordion.Item eventKey='0' style={{ textAlign: 'center' }}>
                                             <Accordion.Header>Materials</Accordion.Header>
                                             <Accordion.Body>
-                                                <ul>
+                                                <ul style={{listStyleType:'none'}}>
                                                     <li style={{ paddingBottom: '10px' }}><FileEarmarkPdf size={36} />Syllabus.pdf<PencilSquare style={{ marginLeft: '5px' }} cursor='pointer' /> <X size={36} cursor='pointer' /></li>
                                                     <li style={{ paddingBottom: '10px' }}><FileEarmarkPlay size={36} />Lecture1.pdf <PencilSquare style={{ alignSelf: 'end' }} cursor='pointer' /> <X size={36} cursor='pointer' /></li>
                                                     <li><FileEarmarkPlay size={36} />Lecture2.pdf <PencilSquare style={{ alignSelf: 'end' }} cursor='pointer' /> <X size={36} cursor='pointer' /></li>
