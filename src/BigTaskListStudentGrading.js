@@ -8,14 +8,14 @@ import { FileEarmarkPdf, PencilSquare} from 'react-bootstrap-icons';
 //import TaskListData from 'TaskListData.json';
 let taskListData = require('./TaskListDataGrading.json');
 
-const BigTaskListStudentGrading = ({setModal}) => {
+const BigTaskListStudent = ({ setModal }) => {
     return (
         <Container className='overflow-auto'>
             {taskListData.map((task) => (
                 <Row style={{ paddingBottom: '2%' }}>
                     <Col>
                         <Card key={task.name}>
-                            <Card.Header onClick={() => setModal(true)} style={{ cursor: 'pointer', backgroundColor:'#3C6EFD', color:'white'}}><h6>{task.class} {task.name} <PencilSquare style={{marginLeft:'.5%'}}/></h6></Card.Header>
+                            <Card.Header onClick={() => setModal(true)} style={{ cursor: 'pointer', backgroundColor:'#3C6EFD', color:'white'}}><h6>{task.class} {task.name} </h6></Card.Header>
                             <Card.Body className="card">
                                 <Container>
                                     <Row style={{ alignItems: 'center' }}>
@@ -34,13 +34,13 @@ const BigTaskListStudentGrading = ({setModal}) => {
                                         </Col>
                                         <Col style={{ flexGrow: '4', textAlign: 'center' }}>
                                             <Card body>
-                                                {task.istatus}
+                                                {task.status}
                                             </Card>
                                         </Col>
                                     </Row>
                                     <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                         <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                            <Button href='/ulearn/#/grading' style={{marginLeft:'5%'}}>View Submissions</Button>
+                                            <Button onClick={()=>setModal(true)} style={{marginLeft:'5%'}}>Upload Submission</Button>
                                         </Col>
                                     </Row>
                                 </Container>
@@ -53,4 +53,4 @@ const BigTaskListStudentGrading = ({setModal}) => {
     )
 }
 
-export default BigTaskListStudentGrading;
+export default BigTaskListStudent;
