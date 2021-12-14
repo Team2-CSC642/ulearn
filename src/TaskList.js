@@ -13,7 +13,7 @@ const TaskList = ({ setModal }) => {
                 <Row>
                     <Col>
                         <Card key={task.name}>
-                            <Card.Header onClick={() => setModal(true)} style={{ cursor: 'pointer' }}><h6>{task.class} {task.name}</h6></Card.Header>
+                            <Card.Header onClick={() => setModal(true)}style={{ cursor: 'pointer', backgroundColor:task.color, color:'white'}}><h6>{task.class} {task.name}</h6></Card.Header>
                             <Card.Body className="card">
                                 <Card.Text inline>{task.description}</Card.Text>
                             </Card.Body>
