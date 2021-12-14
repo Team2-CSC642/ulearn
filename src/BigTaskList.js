@@ -30,24 +30,6 @@ const BigTaskList = ({ setModal }) => {
                                     </Row>
                                     <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                         <Col>
-                                            <h5 style={{ alignSelf: 'end' }}>Description:</h5>
-                                        </Col>
-                                        <Col style={{ flexGrow: '4' }}>
-                                            <Card body style={{ textAlign: 'center' }}>
-                                                Lorem Ipsum
-                                            </Card>
-                                        </Col>
-                                    </Row>
-                                    <Row style={{ alignItems: 'center', marginTop: '10px' }}>
-                                        <Col>
-                                            <h5>Materials:</h5>
-                                        </Col>
-                                        <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                            <Card body><FileEarmarkPdf size={36} />Provided PDF Information.pdf</Card>
-                                        </Col>
-                                    </Row>
-                                    <Row style={{ alignItems: 'center', marginTop: '10px' }}>
-                                        <Col>
                                             <h5>Status:</h5>
                                         </Col>
                                         <Col style={{ flexGrow: '4', textAlign: 'center' }}>
