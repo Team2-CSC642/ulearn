@@ -8,7 +8,7 @@ import { FileEarmarkPdf, PencilSquare} from 'react-bootstrap-icons';
 //import TaskListData from 'TaskListData.json';
 let taskListData = require('./TaskListDataGrading.json');
 
-const BigTaskListGrading = ({setModal}) => {
+const BigTaskListStudentGrading = ({setModal}) => {
     return (
         <Container className='overflow-auto'>
             {taskListData.map((task) => (
@@ -53,4 +53,4 @@ const BigTaskListGrading = ({setModal}) => {
     )
 }
 
-export default BigTaskListGrading;
+export default BigTaskListStudentGrading;

@@ -14,7 +14,7 @@ import differenceInCalendarDays from 'date-fns/differenceInCalendarDays';
 import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import BigTaskListStudent from './BigTaskListStudent';
+import BigTaskListStudentGrading from './BigTaskListStudentGrading.js';
 
 const datesToAddAssignmentsTo = [new Date(2021, 11, 25), new Date(2021, 11, 24), new Date(2021, 11, 15)];
 const datesToAddQuizzesTo = [new Date(2021, 11, 10)];
@@ -320,7 +320,7 @@ const StudentCalendarClass = () => {
                                         <Accordion.Item eventKey='0'>
                                             <Accordion.Header>Assignments</Accordion.Header>
                                             <Accordion.Body>
-                                                <BigTaskListStudent setModal={setAssignmentModalShow} />
+                                                <BigTaskListStudentGrading setModal={setAssignmentModalShow} />
                                             </Accordion.Body>
                                         </Accordion.Item>
                                     </Accordion>
