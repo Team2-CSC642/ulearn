@@ -51,7 +51,7 @@ const StudentTaskList = () => {
             <Popover.Header as="h3">CSC 123 Grades</Popover.Header>
             <Popover.Body>
                 Overall Grade: 95.42%
-                
+
             </Popover.Body>
         </Popover>
     );
@@ -69,7 +69,7 @@ const StudentTaskList = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                    <h5 name='logout'><a href='/ulearn/#/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
+                        <h5 name='logout'><a href='/ulearn/#/' style={{ color: 'white', textDecoration: 'none' }}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -92,8 +92,8 @@ const StudentTaskList = () => {
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
                                                 <Accordion.Header> <Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 123</Button></Accordion.Header>
-                                                <Accordion.Body style={{textAlign:'center'}}>
-                                                    <ul style={{textAlign:'left'}}>
+                                                <Accordion.Body style={{ textAlign: 'center' }}>
+                                                    <ul style={{ textAlign: 'left' }}>
                                                         <li>Homework 1 [Submitted]</li>
                                                         <li>Quiz 1 [Graded]</li>
                                                         <li>Discussion Post [Not Submitted]</li>
@@ -107,8 +107,8 @@ const StudentTaskList = () => {
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
                                                 <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 256</Button></Accordion.Header>
-                                                <Accordion.Body style={{textAlign:'center'}}>
-                                                    <ul style={{textAlign:'left'}}>
+                                                <Accordion.Body style={{ textAlign: 'center' }}>
+                                                    <ul style={{ textAlign: 'left' }}>
                                                         <li>Homework 1 [Submitted]</li>
                                                         <li>Quiz 1 [Graded]</li>
                                                         <li>Discussion Post [Not Submitted]</li>
@@ -122,8 +122,8 @@ const StudentTaskList = () => {
                                         <Accordion>
                                             <Accordion.Item eventKey='0'>
                                                 <Accordion.Header><Button href="/ulearn/#/sCalendarClass" variant='outline-primary' >CSC 420</Button></Accordion.Header>
-                                                <Accordion.Body style={{textAlign:'center'}}>
-                                                    <ul style={{textAlign:'left'}}>
+                                                <Accordion.Body style={{ textAlign: 'center' }}>
+                                                    <ul style={{ textAlign: 'left' }}>
                                                         <li>Homework 1 [Submitted]</li>
                                                         <li>Quiz 1 [Graded]</li>
                                                         <li>Discussion Post [Not Submitted]</li>
@@ -144,7 +144,7 @@ const StudentTaskList = () => {
                     <Col className='CenterCol-7' xs={7}>
                         <div className='CenterContent'>
                             <Container style={{ height: '100%' }}>
-                            <Modal
+                                <Modal
                                     size='lg'
                                     aria-labelledby='contained-modal-title-vcenter'
                                     centered
@@ -286,7 +286,7 @@ const StudentTaskList = () => {
                                                     <Card body>12/29/2021 11:59 PM</Card>
                                                 </Col>
                                             </Row>
-                                            <Row style={{ alignItems: 'center', marginTop:'10px' }}>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                                 <Col>
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
@@ -307,20 +307,37 @@ const StudentTaskList = () => {
                                 </Modal>
                                 <Row>
                                     <Col>
-                    
+                                        <Row>
+                                            <Col>
+                                                <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Assignment</p>
+                                                <CircleFill size={10} color='#0D6EFD' style={{ marginLeft: '5px' }} />
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col>
+                                                <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Quiz/Test</p>
+                                                <CircleFill size={10} color='#DD3544' style={{ marginLeft: '5px' }} />
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col>
+                                                <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Event</p>
+                                                <CircleFill size={10} color='#198754' style={{ marginLeft: '5px' }} />
+                                            </Col>
+                                        </Row>
                                     </Col>
                                     <Col className='CenterHeader' style={{ flexGrow: '4' }}>
                                         <h1>Task View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                        <a style={{color:'#6C757D'}} href='/ulearn/#/sCalendar'>
+                                        <a style={{ color: '#6C757D' }} href='/ulearn/#/sCalendar'>
                                             <CalendarEvent size={48} />
                                         </a>
                                     </Col>
                                     <hr />
                                 </Row>
-                                <Row className='overflow-auto' style={{height:'90%'}}>
-                                    <BigTaskListStudent setModal={setAssignmentModalShow}/>
+                                <Row className='overflow-auto' style={{ height: '90%' }}>
+                                    <BigTaskListStudent setModal={setAssignmentModalShow} />
                                 </Row>
                             </Container>
                         </div>
@@ -332,7 +349,7 @@ const StudentTaskList = () => {
                             <Container className='CarouselContainer'>
                                 <Row>
                                     <Col>
-                                         <h5 style={{textAlign:'center'}}>Announcements</h5>
+                                        <h5 style={{ textAlign: 'center' }}>Announcements</h5>
                                         <Carousel className='Carousel'>
                                             <Carousel.Item>
                                                 <img alt="Announcement Slide" className='d-block w-100' src={starslide} />

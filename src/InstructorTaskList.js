@@ -60,7 +60,7 @@ const InstructorTaskList = () => {
                     </Col>
 
                     <Col className='DashOptions'>
-                        <h5 name='logout'><a href='/ulearn/#/' style={{color:'white', textDecoration:'none'}}>Logout</a></h5>
+                        <h5 name='logout'><a href='/ulearn/#/' style={{ color: 'white', textDecoration: 'none' }}>Logout</a></h5>
                         <h5>Settings</h5>
                         <h5>Notifications</h5>
                     </Col>
@@ -174,7 +174,7 @@ const InstructorTaskList = () => {
                                                     <h4>Materials:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4', textAlign: 'center' }}>
-                                                    <Card style={{textAlign: 'center'}}body><input type='file' multiple style={{ marginLeft: '150px' }}></input></Card>
+                                                    <Card style={{ textAlign: 'center' }} body><input type='file' multiple style={{ marginLeft: '150px' }}></input></Card>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -182,7 +182,7 @@ const InstructorTaskList = () => {
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%' }}></textarea>
+                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width: '100%' }}></textarea>
                                                 </Col>
                                                 <hr />
                                             </Row>
@@ -237,7 +237,7 @@ const InstructorTaskList = () => {
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width: '100%' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -298,7 +298,7 @@ const InstructorTaskList = () => {
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width: '100%' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -355,12 +355,12 @@ const InstructorTaskList = () => {
                                                     </Card>
                                                 </Col>
                                             </Row>
-                                            <Row style={{ alignItems: 'center', marginTop: '10px'}}>
+                                            <Row style={{ alignItems: 'center', marginTop: '10px' }}>
                                                 <Col>
                                                     <h4 style={{ alignSelf: 'end' }}>Description:</h4>
                                                 </Col>
                                                 <Col style={{ flexGrow: '4' }}>
-                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width:'100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                                                    <textarea rows='4' cols='71' style={{ borderColor: 'rgb(223, 223, 223)', width: '100%' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
                                                 </Col>
                                             </Row>
                                             <Row style={{ alignItems: 'center', marginTop: '10px' }}>
@@ -388,20 +388,37 @@ const InstructorTaskList = () => {
                                 </Modal>
                                 <Row>
                                     <Col>
-                    
+                                        <Row>
+                                            <Col>
+                                                <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Assignment</p>
+                                                <CircleFill size={10} color='#0D6EFD' style={{ marginLeft: '5px' }} />
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col>
+                                                <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Quiz/Test</p>
+                                                <CircleFill size={10} color='#DD3544' style={{ marginLeft: '5px' }} />
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col>
+                                                <p style={{ margin: '0px', fontSize: '12px', display: 'inline' }}>Event</p>
+                                                <CircleFill size={10} color='#198754' style={{ marginLeft: '5px' }} />
+                                            </Col>
+                                        </Row>
                                     </Col>
                                     <Col className='CenterHeader' style={{ flexGrow: '4' }}>
                                         <h1>Task View</h1>
                                     </Col>
                                     <Col style={{ alignSelf: 'center' }}>
-                                        <a style={{color:'#6C757D'}} href='/ulearn/#/iCalendar'>
+                                        <a style={{ color: '#6C757D' }} href='/ulearn/#/iCalendar'>
                                             <CalendarEvent size={48} />
                                         </a>
                                     </Col>
                                     <hr />
                                 </Row>
-                                <Row className='overflow-auto' style={{height:'90%'}}>
-                                    <BigTaskList setModal={setAssignmentModalShow}/>
+                                <Row className='overflow-auto' style={{ height: '90%' }}>
+                                    <BigTaskList setModal={setAssignmentModalShow} />
                                 </Row>
                             </Container>
                         </div>
@@ -413,7 +430,7 @@ const InstructorTaskList = () => {
                             <Container className='CarouselContainer'>
                                 <Row>
                                     <Col>
-                                         <h5 style={{textAlign:'center'}}>Announcements</h5>
+                                        <h5 style={{ textAlign: 'center' }}>Announcements</h5>
                                         <Carousel className='Carousel'>
                                             <Carousel.Item>
                                                 <img alt="Announcement Slide" className='d-block w-100' src={starslide} />

@@ -330,7 +330,7 @@ const StudentCalendarClass = () => {
                                             <Accordion.Body>
                                                 <ul>
                                                     <Card>
-                                                        <Container style={{ backgroundColor: '#484848' }}><Card.Title style={{ marginTop: '10px', color: 'white' }}>Quiz 1</Card.Title></Container>
+                                                        <Container style={{ backgroundColor: '#DD3544' }}><Card.Title style={{ marginTop: '10px', color: 'white' }}>Quiz 1</Card.Title></Container>
                                                         <Card.Body>
                                                             <Container>
                                                                 <Row style={{ alignItems: 'center' }}>
@@ -389,7 +389,7 @@ const StudentCalendarClass = () => {
                                             <Accordion.Body>
                                                 <ul>
                                                     <Card>
-                                                        <Container style={{ backgroundColor: '#484848' }}><Card.Title style={{ marginTop: '10px', color: 'white' }}>Event 1</Card.Title></Container>
+                                                        <Container style={{ backgroundColor: '#3F8755' }}><Card.Title style={{ marginTop: '10px', color: 'white' }}>Event 1</Card.Title></Container>
                                                         <Card.Body>
                                                             <Container>
                                                                 <Row style={{ alignItems: 'center' }}>
