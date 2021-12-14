@@ -6,25 +6,28 @@
         "completed": false,
         "dueDate": "12/10/2021 11:59 PM",
         "istatus": "Closed: 0/45 Graded",
-        "status": "Not Submitted"
+        "status": "Not Submitted",
+        "color": "#3C6EFD"
     },
     {
-        "name": "Homework 4",
+        "name": "Quiz 4",
         "class": "CSC 420",
         "description": "Submit PDF through Github",
         "completed": false,
         "dueDate": "12/10/2021 11:59 PM",
         "istatus": "Closed: 0/45 Graded",
-        "status": "Not Submitted"
+        "status": "Not Submitted",
+        "color": "#DD3544"
     },
     {
-        "name": "Report 2",
+        "name": "Event 2",
         "class": "CSC 123",
-        "description": "5 pages minimum",
+        "description": "Thise do be an event",
         "completed": false,
         "dueDate": "12/10/2021 11:59 PM",
         "istatus": "Closed: 0/45 Graded",
-        "status": "Not Submitted"
+        "status": "Not Submitted",
+        "color": "#3F8755"
     },
     {
         "name": "Assignment 3",
@@ -33,7 +36,8 @@
         "completed": false,
         "dueDate": "12/10/2021 11:59 PM",
         "istatus": "Closed: 0/45 Graded",
-        "status": "Not Submitted"
+        "status": "Not Submitted",
+        "color": "#3C6EFD"
     },
     {
         "name": "Assignment 2",
@@ -42,6 +46,7 @@
         "completed": false,
         "dueDate": "12/10/2021 11:59 PM",
         "istatus": "Closed: 0/45 Graded",
-        "status": "Not Submitted"
+        "status": "Not Submitted",
+        "color": "#3C6EFD"
     }
 ]
